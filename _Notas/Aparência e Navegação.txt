@@ -1,0 +1,1 @@
+Embora a estrutura HTML e CSS seja funcional, a navegação entre as páginas pode ser mais intuitiva. Em vez de uma lista simples, eu gostaria de um menu de navegação no topo ou em uma barra lateral, para que meus clientes possam encontrar o que precisam de forma rápida e elegante.
