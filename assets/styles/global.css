@@ -103,3 +103,78 @@ footer {
     border-top: 1px solid var(--cor-borda);
     color: var(--cor-texto-secundario);
 }
+
+/* --- ESTILOS ESPECÍFICOS PARA DOCUMENTOS LEGAIS (Classe: .documento-legal) --- */
+
+/* Ajuste de Títulos Principais */
+.documento-legal h1 {
+    font-size: 2.5rem;
+    color: var(--cor-titulo);
+    border-bottom: 2px solid var(--cor-link); /* Destaque na cor do link */
+    padding-bottom: 15px;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+}
+
+/* Ajuste de Títulos de Seção (h2) */
+.documento-legal h2 {
+    font-size: 1.5rem;
+    color: var(--cor-link); /* Títulos de seção claros */
+    margin-top: 2rem;
+    margin-bottom: 0.75rem;
+    font-weight: 500;
+}
+
+/* Ajuste de Subtítulos (h3) - Caso você use */
+.documento-legal h3 {
+    font-size: 1.2rem;
+    color: var(--cor-texto-principal);
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+    font-weight: 400;
+}
+
+/* Estilo para a data de vigência */
+.data-vigencia {
+    font-size: 0.9rem;
+    color: var(--cor-texto-secundario);
+    margin-bottom: 2rem;
+    display: block; /* Garante que fique em uma linha separada */
+}
+
+/* Estilo para Parágrafos com melhor leitura */
+.documento-legal p {
+    margin-bottom: 1rem;
+    line-height: 1.8; /* Aumenta o espaçamento para melhor leitura */
+    color: var(--cor-texto-principal);
+}
+
+/* Estilo para Listas (pontos legais) */
+.documento-legal ul {
+    list-style-type: none; /* Remove o ponto padrão */
+    margin-left: 0;
+    padding-left: 20px; /* Espaçamento para o bullet customizado */
+}
+
+.documento-legal ul li {
+    margin-bottom: 1rem;
+    color: var(--cor-texto-principal);
+    position: relative;
+    padding-left: 15px;
+}
+
+/* Criação de um 'bullet point' personalizado */
+.documento-legal ul li::before {
+    content: '•'; /* Você pode usar um quadrado, seta, ou um ponto simples */
+    color: var(--cor-link);
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+}
+
+/* Destaque para termos importantes (como "Controlador", "LGPD") */
+.documento-legal strong {
+    color: var(--cor-titulo);
+    font-weight: 700;
+}
