@@ -135,7 +135,8 @@ aside {
 aside h2 {
     border-bottom: 2px solid var(--light-border);
     padding-bottom: 8px;
-    margin-top: 0;
+    /* EDITADO: Margem superior definida para 3vh. */
+    margin-top: 3vh; 
     font-size: 1.2rem;
     font-weight: 700;
 }
@@ -171,6 +172,11 @@ aside ul a.active {
 
 
 /* COMPONENTES DE CONTEÚDO */
+
+/* AJUSTE ANTERIOR: Espaçamento vertical entre parágrafos para melhor leitura */
+#conteudo-principal p {
+    margin-bottom: 1.2em; /* Adiciona espaço abaixo de cada parágrafo */
+}
 
 /* Destaque da Lei/Alerta (Mais profissional) */
 .card-alerta {
@@ -262,6 +268,7 @@ footer a {
     aside h2 {
         text-align: center;
         border-bottom: none;
+        margin-top: 1em; /* Margem padrão para mobile. */
     }
 
     aside ul {
