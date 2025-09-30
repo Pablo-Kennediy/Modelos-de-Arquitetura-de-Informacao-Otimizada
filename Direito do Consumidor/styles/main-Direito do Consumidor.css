@@ -1,38 +1,62 @@
 /* Variáveis CSS para gerenciamento fácil de cores */
 :root {
-    --primary-color: #0056b3; /* Azul Marinho Profundo (Autoridade) */
-    --secondary-color: #ffc107; /* Amarelo (Avisos/Destaque) */
-    --action-color: #38a169; /* Verde (Botão) */
-    --background-color: #f8f9fa; /* Fundo Cinza Claro */
-    --text-color: #212529; /* Texto Quase Preto */
+    --primary-color: #0056b3;
+    /* Azul Marinho Profundo (Autoridade) */
+    --secondary-color: #ffc107;
+    /* Amarelo (Avisos/Destaque) */
+    --action-color: #38a169;
+    /* Verde (Botão) */
+    --background-color: #f8f9fa;
+    /* Fundo Cinza Claro */
+    --text-color: #212529;
+    /* Texto Quase Preto */
     --light-border: #e9ecef;
 }
 
 /* RESET BÁSICO E TIPOGRAFIA (Aprimorado) */
 body {
     font-family: 'Open Sans', Arial, sans-serif;
-    line-height: 1.7; /* Aumentado para melhor legibilidade em textos longos */
+    line-height: 1.7;
+    /* Aumentado para melhor legibilidade em textos longos */
     color: var(--text-color);
     background-color: var(--background-color);
     /* CORREÇÃO APLICADA: Garantindo que o conteúdo não suba sob o header fixo */
-    padding-top: 100px; 
+    padding-top: 100px;
     margin: 0;
 }
 
 /* Títulos: Maior impacto visual e separação clara */
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     font-family: 'Merriweather', Georgia, serif;
     color: var(--primary-color);
-    margin-top: 2em; /* Mais espaço acima do título */
+    margin-top: 2em;
+    /* Mais espaço acima do título */
     padding-bottom: 0.6em;
     border-bottom: 2px solid var(--light-border);
     font-weight: 700;
     letter-spacing: -0.5px;
 }
 
-h1 { font-size: 2.5rem; }
-h2 { font-size: 2rem; }
-h3 { font-size: 1.5rem; }
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+h1,
+h2,
+h3,
+p {
+    margin: 15px;
+}
 
 a {
     color: var(--primary-color);
@@ -41,9 +65,11 @@ a {
 }
 
 a:hover {
-    color: #004085; /* Tom de azul mais escuro no hover */
+    color: #004085;
+    /* Tom de azul mais escuro no hover */
     text-decoration: none;
-    border-bottom: 1px solid #004085; /* Underline sutil com borda */
+    border-bottom: 1px solid #004085;
+    /* Underline sutil com borda */
 }
 
 
@@ -51,13 +77,15 @@ a:hover {
 header {
     background-color: var(--primary-color);
     color: white;
-    padding: 18px 0; /* Mais imponente */
+    padding: 18px 0;
+    /* Mais imponente */
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 100;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15); /* Sombra mais suave */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    /* Sombra mais suave */
 }
 
 header .container {
@@ -114,7 +142,7 @@ header button[type="submit"]:hover {
 
 /* NOVO: Aumentar o espaçamento entre as seções principais */
 #conteudo-principal section {
-    margin-bottom: 60px; 
+    margin-bottom: 60px;
     padding-top: 10px;
 }
 
@@ -127,7 +155,7 @@ header button[type="submit"]:hover {
 aside {
     position: sticky;
     /* CORREÇÃO APLICADA: Alinhado com o padding-top do body */
-    top: 100px; 
+    top: 100px;
     height: fit-content;
     padding-right: 20px;
 }
@@ -136,7 +164,7 @@ aside h2 {
     border-bottom: 2px solid var(--light-border);
     padding-bottom: 8px;
     /* EDITADO: Margem superior definida para 3vh. */
-    margin-top: 3vh; 
+    margin-top: 3vh;
     font-size: 1.2rem;
     font-weight: 700;
 }
@@ -149,7 +177,8 @@ aside ul {
 
 aside ul a {
     display: block;
-    padding: 10px 15px; /* Mais preenchimento */
+    padding: 10px 15px;
+    /* Mais preenchimento */
     color: var(--text-color);
     text-decoration: none;
     border-left: 4px solid transparent;
@@ -164,9 +193,11 @@ aside ul a:hover {
 }
 
 aside ul a.active {
-    border-left: 4px solid var(--primary-color); /* Borda Ativa com a cor principal */
+    border-left: 4px solid var(--primary-color);
+    /* Borda Ativa com a cor principal */
     color: var(--primary-color);
-    background-color: #e6f0ff; /* Fundo azul muito sutil para o ativo */
+    background-color: #e6f0ff;
+    /* Fundo azul muito sutil para o ativo */
     font-weight: 700;
 }
 
@@ -175,18 +206,22 @@ aside ul a.active {
 
 /* AJUSTE ANTERIOR: Espaçamento vertical entre parágrafos para melhor leitura */
 #conteudo-principal p {
-    margin-bottom: 1.2em; /* Adiciona espaço abaixo de cada parágrafo */
+    margin-bottom: 1.2em;
+    /* Adiciona espaço abaixo de cada parágrafo */
 }
 
 /* Destaque da Lei/Alerta (Mais profissional) */
 .card-alerta {
-    background-color: #fff8e1; /* Fundo mais suave */
-    border-left: 6px solid var(--secondary-color); /* Borda mais grossa */
+    background-color: #fff8e1;
+    /* Fundo mais suave */
+    border-left: 6px solid var(--secondary-color);
+    /* Borda mais grossa */
     padding: 20px 25px;
     margin: 30px 0;
     border-radius: 6px;
     color: #7d5a00;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Sombra sutil */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    /* Sombra sutil */
 }
 
 .card-alerta h3 {
@@ -213,8 +248,10 @@ aside ul a.active {
 footer {
     background-color: var(--text-color);
     color: #cccccc;
-    padding: 25px 0; /* Mais espaçamento no footer */
-    margin-top: 60px; /* Mais separação do conteúdo */
+    padding: 25px 0;
+    /* Mais espaçamento no footer */
+    margin-top: 60px;
+    /* Mais separação do conteúdo */
     font-size: 0.9rem;
 }
 
@@ -226,22 +263,27 @@ footer a {
 
 .fade-in-section {
     opacity: 0;
-    transform: translateY(20px); /* Começa 20px abaixo da posição final */
-    transition: all 0.6s ease-out; /* Duração e tipo de transição */
-    will-change: opacity, transform; /* Otimização de performance */
+    transform: translateY(20px);
+    /* Começa 20px abaixo da posição final */
+    transition: all 0.6s ease-out;
+    /* Duração e tipo de transição */
+    will-change: opacity, transform;
+    /* Otimização de performance */
 }
 
 /* Classe ativada pelo JavaScript quando o elemento entra na área de visualização */
 .fade-in-section.is-visible {
     opacity: 1;
-    transform: translateY(0); /* Posição final */
+    transform: translateY(0);
+    /* Posição final */
 }
 
 
 /* MEDIA QUERY para Mobile */
 @media (max-width: 800px) {
     .layout-grid {
-        grid-template-columns: 1fr; /* Coluna única no mobile */
+        grid-template-columns: 1fr;
+        /* Coluna única no mobile */
         gap: 20px;
     }
 
@@ -256,11 +298,13 @@ footer a {
 
     header input[type="search"] {
         width: 100%;
-        box-sizing: border-box; /* Garante que o padding não estoure a largura */
+        box-sizing: border-box;
+        /* Garante que o padding não estoure a largura */
     }
 
     aside {
-        position: static; /* Desativa o sticky no mobile */
+        position: static;
+        /* Desativa o sticky no mobile */
         height: auto;
         padding-right: 0;
     }
@@ -268,11 +312,13 @@ footer a {
     aside h2 {
         text-align: center;
         border-bottom: none;
-        margin-top: 1em; /* Margem padrão para mobile. */
+        margin-top: 1em;
+        /* Margem padrão para mobile. */
     }
 
     aside ul {
-        display: flex; /* Transforma o menu em lista horizontal */
+        display: flex;
+        /* Transforma o menu em lista horizontal */
         flex-wrap: wrap;
         justify-content: center;
     }
@@ -284,6 +330,7 @@ footer a {
         padding: 5px 8px;
     }
 }
-#temas-principais{
-    margin-top: 200px;
+
+#temas-principais {
+    margin-top: 150px;
 }
