@@ -1,73 +1,80 @@
-🛒 Site: Guia Prático de Direito do Consumidor
-Plataforma essencial para consulta sobre relações de consumo, focada nos direitos e deveres conforme o CDC, com ênfase em e-commerce, serviços digitais e segurança online.
+🛒 README.md: Guia Prático de Direito do Consumidor
+Plataforma essencial para consulta sobre relações de consumo, focada nos direitos e deveres conforme o Código de Defesa do Consumidor (CDC), com ênfase em e-commerce, serviços digitais e segurança online.
 
 🎯 Objetivo e Fundamentação Legal
-O objetivo é fornecer um guia prático e atualizado sobre as normas que regem as relações de consumo, com foco especial nas transações modernas (digitais e online). O conteúdo será diretamente embasado nas seguintes fontes primárias:
+O objetivo é fornecer um guia prático e atualizado sobre as normas que regem as relações de consumo, com foco especial nas transações modernas (digitais e online). O conteúdo é diretamente embasado nas seguintes fontes primárias:
 
 Lei n.º 8.078/90 (Código de Defesa do Consumidor - CDC).
 
 Decretos específicos sobre Comércio Eletrônico (ex: Decreto 7.962/13).
 
-Súmulas e Jurisprudência dos Tribunais que pacificam temas de consumo (ex: responsabilidade por vício, cobrança indevida).
+Súmulas e Jurisprudência dos Tribunais que pacificam temas de consumo.
 
 Lei Geral de Proteção de Dados (LGPD), no que tange ao tratamento de dados do consumidor.
 
 📋 Conteúdo Principal e Garantia de Autoridade
-O site será estruturado por temas práticos e de alta demanda, garantindo a rápida localização da informação.
+O site é estruturado por temas práticos e de alta demanda, garantindo a rápida localização da informação:
 
 Direitos Básicos: Proteção à vida, saúde, segurança e informação (Art. 6º do CDC).
 
 Oferta e Publicidade: Regras de vinculação e publicidade enganosa/abusiva.
 
-Responsabilidade por Fato e Vício do Produto/Serviço: Prazos, reparo e substituição.
+Responsabilidade por Fato e Vício: Prazos, reparo e substituição.
 
 Contratos de Consumo: Cláusulas abusivas e a interpretação mais favorável ao consumidor.
 
-Comércio Eletrônico e Digital: Direito de Arrependimento (7 dias), informações obrigatórias em e-commerce e serviços SaaS/Assinatura.
+E-commerce: Direito de Arrependimento (Art. 49) e regras do Comércio Eletrônico.
 
-Proteção Contratual e Cobrança: Cobrança de dívidas, cadastros de inadimplentes e superendividamento.
+🔒 Foco em Segurança e Compliance
+Como empresa de desenvolvimento, a segurança é a nossa maior prioridade. Este projeto adota uma abordagem Security by Design para garantir a integridade do conteúdo e a proteção do usuário:
 
-Integridade Legal e Aviso
-Fonte da Lei: Utilizaremos o texto atualizado do CDC e dos Decretos relacionados.
+OWASP: O desenvolvimento segue os padrões do OWASP Top 10 para mitigação de riscos (como XSS e Injeção), conforme detalhado no nosso guia de segurança.
 
-Aviso Legal: O conteúdo é informativo e não substitui o aconselhamento jurídico.
+LGPD: O design de informação está em estrito Compliance com a LGPD, reforçando a credibilidade da plataforma.
 
-Ênfase em Atualizações: Dada a frequência de mudanças regulatórias em tecnologia, haverá um foco no monitoramento e atualização de conteúdos sobre Direito Digital do Consumidor.
+Reverse Tabnabbing Mitigado: Todos os links externos com target="_blank" utilizam rel="noopener noreferrer" para proteger a sessão do usuário.
 
-🛡️ Padrões de Segurança e Qualidade de Código
-Aplicaremos a mesma rigorosa metodologia de desenvolvimento da sua empresa, com foco especial na proteção de dados do usuário, alinhado à sua expertise em Cyber Security:
+Mínimo Privilégio (APIs): A arquitetura, que prevê o uso de um CMS Headless, garante que as chaves de leitura sejam separadas das chaves de escrita, e que o princípio do Mínimo Privilégio seja aplicado em todas as integrações de APIs.
 
-Segurança (Cyber Security): Implementação de práticas OWASP e especial atenção à segurança de APIs de terceiros (se houver), e validação de inputs para prevenir falhas comuns em sistemas de consumo.
+🛠️ Tecnologias e Estrutura (Tech Stack)
+Este projeto é focado em alta performance e legibilidade do código:
 
-Qualidade do Código: Uso de Linters e Formatters para manter a alta performance e facilidade de manutenção.
+Frontend: HTML5 (Semântico), CSS3 (Acessível) e JavaScript.
 
-Compliance LGPD: Garantia de que qualquer interação ou coleta de dados no site (mesmo que para fins de contato) esteja em conformidade com a LGPD, reforçando a credibilidade da sua empresa.
+Design/Usabilidade: Padrões WCAG para garantir que o conteúdo legal seja acessível a todos os consumidores.
 
-Acessibilidade: Padrões WCAG para garantir que o conteúdo legal seja acessível a todos os consumidores.
-
-🛠️ Tecnologias Principais (Tech Stack)
-Frontend: [Escolha: Idealmente que suporte forte SEO e alta performance.]
-
-Backend: [Escolha]
-
-Banco de Dados: [Escolha]
-
-CMS Headless (Recomendado): Para gerenciar o vasto material de jurisprudência e artigos de forma segura.
+CMS Headless (Recomendado): Para gerenciar o vasto material de jurisprudência e artigos de forma segura, mantendo o conteúdo isolado da camada de apresentação.
 
 ⚙️ Arquitetura e Estrutura do Projeto
-A arquitetura será modular e robusta, projetada para lidar com a constante adição de estudos de caso e jurisprudências:
+A arquitetura é modular e robusta, projetada para lidar com a constante adição de estudos de caso e jurisprudências:
 
-/src
-├── /api              # Rotas do backend (se houver pesquisa avançada ou autenticação)
-├── /components       # Componentes de UI (ex: "Card de Jurisprudência", "Tabela de Prazos")
-├── /content          # Modelos de dados e schema para o conteúdo do CDC
-├── /data             # Arquivos para dados estáticos, como o texto do CDC (otimizado)
-└── /services         # Funções para integração de dados (ex: busca em banco de jurisprudência)
+/
+├── styles/                  # Arquivos CSS (main-Direito do Consumidor.css)
+├── scripts/                 # Arquivos JavaScript (ex: scroll-animation.js)
+├── assets/                  # Ícones, imagens, etc.
+├── inicio.html              # A página principal do guia (index.html)
+├── README.md                # Este arquivo
+├── SECURITY.md              # Guia de segurança e reporte de vulnerabilidades
+└── CONTRIBUTING.md          # Guia de como contribuir
 🚀 Como Executar o Projeto Localmente
-(As instruções de clone, install, configure .env e run dev permanecem as mesmas do projeto anterior.)
+Clone o repositório:
+
+Bash
+
+git clone https://repositorio.usp.br/
+Navegue até o diretório:
+
+Bash
+
+cd [NOME-DO-REPOSITÓRIO]
+Abra o arquivo:
+Simplesmente abra o arquivo inicio.html no seu navegador favorito. Para simular a busca e o backend, você precisará configurar um ambiente de desenvolvimento (ex: com Node.js ou um servidor local).
 
 🤝 Contribuição e Manutenção Profissional
 Manutenção e atualização do conteúdo legal são geridas primariamente pela equipe técnica. Pull Requests (PRs) para melhorias de código e segurança são bem-vindos e passam por revisão rigorosa.
 
-📝 Licença
-Este projeto está sob a Licença [Escolha: Exemplo: MIT].
+Leia nossos guias:
+
+Para detalhes sobre como reportar vulnerabilidades, consulte o SECURITY.md.
+
+Para regras e fluxo de trabalho para contribuições de código, consulte o .
