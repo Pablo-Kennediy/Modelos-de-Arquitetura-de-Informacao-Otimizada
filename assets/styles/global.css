@@ -178,3 +178,11 @@ footer {
     color: var(--cor-titulo);
     font-weight: 700;
 }
+.secao-direito img{
+    max-width: 25px;
+}
+.flex{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}

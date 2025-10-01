@@ -284,13 +284,15 @@ footer {
 }
 
 footer a {
-    color: #ADD8E6; /* Azul claro para contraste e visibilidade */
+    /* COR ATUALIZADA: Branco puro para garantir contraste AAA (WCAG) */
+    color: #FFFFFF; 
     text-decoration: none;
+    transition: color 0.2s ease;
 }
 
 footer a:hover {
     text-decoration: underline;
-    color: var(--cor-fundo);
+    color: var(--cor-secundaria); /* Hover com o Amarelo Dourado para destaque */
 }
 
 footer nav ul {
