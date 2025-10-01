@@ -98,6 +98,8 @@ header .container {
     font-size: 1.8rem;
     font-weight: 700;
     margin: 0;
+    /* >>> ALTERAÇÃO APLICADA: Adiciona espaçamento vertical ao título <<< */
+    padding: 5px 0; 
 }
 
 header form {
@@ -317,17 +319,26 @@ footer a {
     }
 
     aside ul {
-        display: flex;
-        /* Transforma o menu em lista horizontal */
-        flex-wrap: wrap;
+        list-style: none; /* Garante o estilo de lista */
+        padding: 0;
+        /* Remove display: flex para garantir coluna única */
         justify-content: center;
     }
 
     aside ul a {
-        border-left: none;
-        border-bottom: 3px solid transparent;
-        margin: 0 10px 5px 10px;
-        padding: 5px 8px;
+        display: block; /* Garante que ocupe a linha inteira */
+        border-left: 4px solid transparent; /* Manter o estilo de borda */
+        border-bottom: none; /* Remove a borda inferior que era usada para o layout horizontal */
+        margin: 2px 0; /* Espaçamento vertical entre os links */
+        padding: 10px 15px;
+        /* >>> Alteração do penúltimo passo: Centraliza o texto dos links <<< */
+        text-align: center; 
+    }
+
+    aside ul a:hover {
+        border-left-color: var(--light-border);
+        background-color: #f3f6f9;
+        color: var(--primary-color);
     }
 }
 
