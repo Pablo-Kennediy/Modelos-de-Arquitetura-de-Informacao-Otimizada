@@ -150,7 +150,7 @@ header button[type="submit"]:hover {
 
 /* AJUSTE: Espaço para o destaque inicial */
 #conteudo-principal article.destaque-lei {
-    margin-bottom: 40px;
+    margin: 40px;
 }
 
 /* ASIDE (MENU LATERAL) - Aprimorado */

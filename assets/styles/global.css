@@ -7,11 +7,12 @@
     --cor-fundo-secao: #1a1a1a;
     --cor-texto-principal: #e0e0e0;
     --cor-texto-secundario: #a0a0a0;
-    --cor-link: #3498db;
-    --cor-link-hover: #5dace2;
+    --cor-link: #FFB74D; /* NECTAR Dourado (Destaque e Prestígio) */
+    --cor-link-hover: #FFCD58; /* Dourado mais brilhante no hover */
     --cor-borda: #2c2c2c;
     --cor-titulo: #f5f5f5;
     --cor-footer: #0c0c0c;
+    --cor-secundaria-sobria: #34495e; /* Azul Escuro para títulos de seção */
 }
 
 * {
@@ -64,7 +65,7 @@ header p {
 
 .secao-direito h2 {
     font-size: 1.8rem;
-    color: var(--cor-link);
+    color: var(--cor-secundaria-sobria); /* Usando um Azul Sóbrio para o Título da Seção (Confiança) */
     margin-bottom: 0.5rem;
     font-weight: 500;
 }
@@ -109,8 +110,8 @@ footer {
 /* Ajuste de Títulos Principais */
 .documento-legal h1 {
     font-size: 2.5rem;
-    color: var(--cor-titulo);
-    border-bottom: 2px solid var(--cor-link); /* Destaque na cor do link */
+    color: var(--cor-link); /* Dourado no Título Principal */
+    border-bottom: 2px solid var(--cor-link); 
     padding-bottom: 15px;
     margin-bottom: 1.5rem;
     font-weight: 700;
@@ -119,7 +120,7 @@ footer {
 /* Ajuste de Títulos de Seção (h2) */
 .documento-legal h2 {
     font-size: 1.5rem;
-    color: var(--cor-link); /* Títulos de seção claros */
+    color: var(--cor-secundaria-sobria); /* Azul Sóbrio para Títulos de Seção */
     margin-top: 2rem;
     margin-bottom: 0.75rem;
     font-weight: 500;
@@ -166,7 +167,7 @@ footer {
 /* Criação de um 'bullet point' personalizado */
 .documento-legal ul li::before {
     content: '•'; /* Você pode usar um quadrado, seta, ou um ponto simples */
-    color: var(--cor-link);
+    color: var(--cor-link); /* O bullet point fica Dourado (NECTAR) */
     font-weight: bold;
     display: inline-block;
     width: 1em;
@@ -175,7 +176,7 @@ footer {
 
 /* Destaque para termos importantes (como "Controlador", "LGPD") */
 .documento-legal strong {
-    color: var(--cor-titulo);
+    color: var(--cor-link); /* Termos importantes em Dourado */
     font-weight: 700;
 }
 .secao-direito img{
