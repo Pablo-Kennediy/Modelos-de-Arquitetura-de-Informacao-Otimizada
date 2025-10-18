@@ -187,3 +187,21 @@ footer {
     align-items: center;
     gap: 10px;
 }
+/* Estilos padrão (para telas maiores ou como fallback) */
+#top--nectar {
+    display: flex; /* Mantém o layout flex para telas maiores */
+    /* Outros estilos como alinhamento, espaçamento, etc. */
+}
+
+/* Media Query: Aplicar estes estilos SOMENTE quando a largura da tela for menor ou igual a 500px */
+@media (max-width: 500px) {
+    #top--nectar {
+        display: block; /* Mudar para 'display: block;' para empilhar os elementos em telas pequenas */
+    }
+
+    /* Opcional: Ajustes para os filhos do bloco */
+    #top--nectar img,
+    #top--nectar h1 {
+        /* Se precisar de alinhamento ou espaçamento adicional quando estiverem empilhados */
+    }
+}
