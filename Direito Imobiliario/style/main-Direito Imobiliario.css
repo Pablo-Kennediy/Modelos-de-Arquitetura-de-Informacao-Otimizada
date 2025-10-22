@@ -5,11 +5,21 @@
     box-sizing: border-box;
 }
 
+:root {
+    /* Paleta de Cores com Madeira/Terra */
+    --vermelho-quente: #CC3333; /* Ação Principal */
+    --vermelho-salmao-pastel: #FF9999; /* Aviso Suave */
+    --marrom-cafe: #5A453A; /* Autoridade/Rodapé/Texto */
+    --bege-castanho: #A58A7A; /* Divisores/Bordas */
+    --bege-areia: #D8C3A5; /* Fundo da Sidebar (Pastel Madeira) */
+    --creme-pessego: #FAF6F2; /* Fundo Geral */
+}
+
 body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
-    color: #333;
-    background-color: #f8f9fa; /* Fundo claro para legibilidade */
+    color: var(--marrom-cafe); /* Cor do Texto Principal: Marrom Café */
+    background-color: var(--creme-pessego);
 }
 
 /* CONTAINER PRINCIPAL */
@@ -17,25 +27,25 @@ main {
     max-width: 1200px;
     margin: 20px auto;
     padding: 0 20px;
-    display: flex; /* Para layout de duas colunas (conteúdo + aside) */
+    display: flex;
     gap: 40px;
 }
 
 section {
-    flex: 3; /* Conteúdo principal ocupa mais espaço */
+    flex: 3;
 }
 
 aside {
-    flex: 1; /* Sidebar para ferramentas */
+    flex: 1;
     padding: 20px;
-    background-color: #e9ecef; /* Cor suave para destacar a sidebar */
+    background-color: var(--bege-areia); /* Sidebar: Bege Areia (Tom Madeira Clara) */
     border-radius: 8px;
-    align-self: flex-start; /* Fica no topo */
+    align-self: flex-start;
 }
 
 /* HEADER - TÍTULO E NAVEGAÇÃO */
 header {
-    background-color: #004d99; /* Azul escuro corporativo/confiável */
+    background-color: var(--marrom-cafe); /* Header: Marrom Café (Autoridade) */
     color: white;
     padding: 20px 0;
     text-align: center;
@@ -76,15 +86,15 @@ nav a:hover {
 
 /* SEÇÕES E CONTEÚDO */
 h2 {
-    color: #004d99;
+    color: var(--marrom-cafe); /* Títulos em Marrom Café */
     font-size: 1.8em;
     margin-top: 20px;
     padding-bottom: 10px;
-    border-bottom: 2px solid #ccc;
+    border-bottom: 2px solid var(--bege-castanho); /* Borda em Bege Castanho */
 }
 
 h3 {
-    color: #0066cc; /* Tom de azul ligeiramente mais claro */
+    color: var(--marrom-cafe);
     font-size: 1.4em;
     margin-bottom: 10px;
 }
@@ -95,9 +105,9 @@ p, ul {
 
 /* Aviso Legal */
 .aviso {
-    background-color: #fff3cd; /* Amarelo suave para aviso */
-    color: #856404;
-    border: 1px solid #ffeeba;
+    background-color: #FFF6F6;
+    color: var(--vermelho-quente);
+    border: 1px solid var(--vermelho-salmao-pastel);
     padding: 15px;
     border-radius: 4px;
     margin-top: 20px;
@@ -115,14 +125,14 @@ p, ul {
 .card {
     background-color: white;
     padding: 20px;
-    border-left: 5px solid #004d99; /* Destaque principal */
+    border-left: 5px solid var(--vermelho-quente); /* Destaque principal Vermelho para atração visual */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     border-radius: 4px;
 }
 
 .card a {
     display: inline-block;
-    color: #0066cc;
+    color: var(--vermelho-quente); /* Link em Vermelho Quente para Ação */
     text-decoration: none;
     font-weight: bold;
     margin-top: 10px;
@@ -130,8 +140,8 @@ p, ul {
 
 /* ASIDE - FERRAMENTAS */
 aside h2 {
-    border-bottom-color: #ccc;
-    color: #333;
+    border-bottom-color: var(--bege-castanho);
+    color: var(--marrom-cafe);
 }
 
 .tool-link {
@@ -139,13 +149,13 @@ aside h2 {
     padding: 15px;
     margin-bottom: 10px;
     border-radius: 4px;
-    border: 1px solid #ddd;
+    border: 1px solid var(--bege-castanho);
 }
 
 .tool-link a {
     display: block;
     text-align: center;
-    background-color: #28a745; /* Verde para Ação/Ferramentas */
+    background-color: var(--vermelho-quente); /* Botão de Ação: Vermelho Quente */
     color: white;
     padding: 8px;
     text-decoration: none;
@@ -156,15 +166,15 @@ aside h2 {
 }
 
 .tool-link a:hover {
-    background-color: #218838;
+    background-color: #A32929; /* Tom mais escuro para hover */
 }
 
 /* FOOTER */
 footer {
     text-align: center;
     padding: 20px;
-    background-color: #343a40; /* Cinza escuro */
-    color: #bbb;
+    background-color: var(--marrom-cafe); /* Footer: Marrom Café */
+    color: var(--bege-areia); /* Texto em Bege Areia */
     font-size: 0.9em;
     margin-top: 40px;
 }
@@ -176,12 +186,12 @@ footer p {
 /* RESPONSIVIDADE BÁSICA */
 @media (max-width: 900px) {
     main {
-        flex-direction: column; /* Coloca sidebar abaixo do conteúdo em telas menores */
+        flex-direction: column;
         gap: 20px;
     }
 
     aside {
-        order: -1; /* Move o Aside para o topo do main */
+        order: -1;
     }
 }
 
