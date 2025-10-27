@@ -1,23 +1,23 @@
 /* Definição de Variáveis de Cores */
 :root {
-    --azul-principal: #0a4b78; /* Azul Escuro Institucional (Sério e Confiável) */
-    --azul-claro: #1476b7;   /* Azul para Acentos e Botões */
-    --fundo-pagina: #f4f7f9; /* Fundo muito claro, quase branco, para legibilidade */
+    --azul-principal: #0a4b78; /* Azul Escuro Institucional (Sério e Confiável)*/
+    --azul-claro: #1476b7;   /* Azul para Acentos e Botões*/
+    --fundo-pagina: #f4f7f9; /* Fundo muito claro, quase branco, para legibilidade*/
     --fundo-card: #ffffff;
     --texto-principal: #333333;
     --borda-suave: #e0e0e0;
-    --alerta-amarelo: #fff3cd; /* Fundo do Disclaimer */
-    --borda-alerta: #ffc107;   /* Borda do Disclaimer */
+    --alerta-amarelo: #fff3cd; /* Fundo do Disclaimer*/
+    --borda-alerta: #ffc107;   /* Borda do Disclaimer*/
 }
 
 /* --- ESTILOS GLOBAIS E TIPOGRAFIA --- */
 body {
-    font-family: 'Arial', sans-serif; /* Fonte de alta legibilidade */
+    font-family: 'Arial', sans-serif; /* Fonte de alta legibilidade*/
     margin: 0;
     padding: 0;
     background-color: var(--fundo-pagina);
     color: var(--texto-principal);
-    line-height: 1.6; /* Melhor espaçamento entre linhas para leitura longa */
+    line-height: 1.6; /* Melhor espaçamento entre linhas para leitura longa*/
 }
 
 /* Títulos */
@@ -50,7 +50,7 @@ section {
     padding: 30px;
     margin-bottom: 30px;
     border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* Sombra suave para destacar o conteúdo */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* Sombra suave para destacar o conteúdo*/
 }
 
 /* --- HEADER E NAVEGAÇÃO --- */
@@ -76,7 +76,7 @@ header nav a {
     text-decoration: none;
     font-weight: 600;
     padding: 5px 10px;
-    border-bottom: 2px solid transparent; /* Linha de base para transição */
+    border-bottom: 2px solid transparent; /* Linha de base para transição*/
     transition: border-bottom 0.3s ease;
 }
 
@@ -102,7 +102,7 @@ header nav a:hover {
     border: 1px dashed var(--azul-claro);
     border-radius: 6px;
     text-align: center;
-    background-color: #f7f9fd; /* Fundo para destacar a área de cálculo */
+    background-color: #f7f9fd; /* Fundo para destacar a área de cálculo*/
 }
 
 .ferramenta-calculo button[disabled] {
@@ -140,6 +140,34 @@ footer {
     font-size: 0.9em;
 }
 
+/* --- BOTÃO VOLTAR AO TOPO (BACK TO TOP) --- */
+#back-to-top {
+    /* Posição Fixa no canto inferior direito*/
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    /* Estilo e Cores*/
+    background-color: var(--azul-claro);
+    color: white;
+    border: none;
+    border-radius: 50%; /* Torna o botão redondo*/
+    width: 50px;
+    height: 50px;
+    font-size: 1.2em;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* Transição suave para o hover*/
+    transition: background-color 0.3s, opacity 0.3s;
+    /* Inicialmente invisível e fora do fluxo (será mostrado por JS)*/
+    opacity: 0;
+    pointer-events: none;
+    z-index: 1000; /* Garante que fique acima de outros elementos*/
+}
+
+#back-to-top:hover {
+    background-color: var(--azul-principal);
+}
+
 /* --- RESPONSIVIDADE (MOBILE FIRST) --- */
 @media (max-width: 768px) {
     main#conteudo-principal {
@@ -148,7 +176,7 @@ footer {
     }
 
     header nav ul {
-        flex-direction: column; /* Links empilhados em telas menores */
+        flex-direction: column; /* Links empilhados em telas menores*/
         gap: 10px;
         margin-top: 10px;
     }

@@ -1,14 +1,19 @@
 /*
- * Configurações Base e Reset
+ * Configurações Base e Reset - DARK MODE
  */
 :root {
-    --color-primary: #1e3a8a; /* Azul Escuro - Blue-900 */
-    --color-secondary: #fcd34d; /* Amarelo - Yellow-500 */
-    --color-success: #15803d; /* Verde para sucesso/confiabilidade */
-    --color-danger: #b91c1c; /* Vermelho para avisos/segurança */
-    --color-background-light: #f9fafb; /* Cinza claro - Gray-50 */
-    --color-background-blue: #eff6ff; /* Azul muito claro - Blue-50 */
-    --color-text-dark: #374151; /* Cinza escuro - Gray-700 */
+    /* Cores ajustadas para tema Escuro */
+    --color-primary: #93c5fd; /* Azul Claro para Destaque (Light Blue) */
+    --color-secondary: #fcd34d; /* Amarelo (Mantido) */
+    --color-success: #10b981; /* Verde (Emerald) */
+    --color-danger: #ef4444; /* Vermelho (Red) */
+    
+    /* Fundo e Texto Principais */
+    --color-background-dark: #121212; /* Fundo Principal - Quase Preto */
+    --color-background-secondary: #1f2937; /* Fundo de Seção - Cinza Escuro (Gray-800) */
+    --color-background-light: #2c3e50; /* Fundo do Header (Mais escuro que o background) */
+    --color-text-light: #f3f4f6; /* Texto Principal - Cinza muito claro */
+    --color-text-secondary: #d1d5db; /* Texto Secundário - Cinza claro */
 }
 
 * {
@@ -20,8 +25,9 @@
 body {
     font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
     line-height: 1.6;
-    color: var(--color-text-dark);
-    background-color: #fff;
+    color: var(--color-text-light); /* Letra Branca/Clara */
+    background-color: var(--color-background-dark); /* Fundo Preto */
+    padding: 0 1rem; /* Adicionado um padding base para melhor visualização */
 }
 
 /*
@@ -33,30 +39,34 @@ body {
     margin-right: auto;
     padding: 1rem; /* p-4 */
     max-width: 900px; /* max-w-4xl aproximado */
+    background-color: var(--color-background-dark); /* Fundo do Container */
 }
 
 /*
  * Tipografia e Estilos de Texto
  */
 h1 {
-    font-size: 3rem; /* text-5xl */
-    font-weight: 800; /* font-extrabold */
-    color: var(--color-primary); /* text-blue-900 */
+    font-size: 3rem; 
+    font-weight: 800; 
+    color: var(--color-primary); /* Destaque Primário */
+    text-shadow: 0 0 10px rgba(147, 197, 253, 0.3); /* Um leve brilho */
 }
 
 h2 {
-    font-size: 1.875rem; /* text-3xl */
-    font-weight: 700; /* font-bold */
-    color: var(--color-text-dark); /* text-gray-800 */
+    font-size: 2rem; /* Aumentado ligeiramente */
+    font-weight: 700; 
+    color: var(--color-text-light); 
 }
 
 h3 {
-    font-size: 1.25rem; /* text-xl */
-    font-weight: 600; /* font-semibold */
+    font-size: 1.5rem; /* Aumentado */
+    font-weight: 600; 
+    color: var(--color-primary); /* Destaque Primário */
 }
 
 p {
-    font-size: 1.125rem; /* text-lg */
+    font-size: 1rem; /* Ajustado para melhor leitura em Dark Mode */
+    color: var(--color-text-secondary);
 }
 
 .text-xl {
@@ -65,6 +75,7 @@ p {
 
 .text-sm {
     font-size: 0.875rem;
+    color: var(--color-text-secondary); /* Textos menores mais suaves */
 }
 
 .font-semibold {
@@ -76,21 +87,20 @@ p {
 }
 
 .text-blue-700 {
-    color: #1d4ed8;
+    color: #60a5fa; /* Azul mais claro para texto dentro de seções */
+}
+
+.text-gray-700 {
+    color: var(--color-text-secondary);
 }
 
 .text-red-700 {
     color: var(--color-danger);
 }
 
-.text-gray-700 {
-    color: var(--color-text-dark);
-}
-
 .text-center {
     text-align: center;
 }
-
 
 /*
  * Componentes Estruturais (Header, Sections)
@@ -103,64 +113,81 @@ p {
 .mt-8 { margin-top: 2rem; }
 
 .rounded-lg { border-radius: 0.5rem; }
-.bg-gray-50 { background-color: var(--color-background-light); }
 
-.border-b-2 { border-bottom: 2px solid #e5e7eb; /* border-gray-200 */ }
+/* Header com fundo ligeiramente diferente do body */
+.bg-gray-50 { 
+    background-color: var(--color-background-secondary); 
+    border: 1px solid #374151; /* Borda sutil */
+}
+
+.border-b-2 { border-bottom: 2px solid #374151; /* Borda escura */ }
 
 /*
- * Pilares Legais (ul, li)
+ * Listas (UL, LI) - PADRÃO: SEM MARCADOR
  */
+ul {
+    list-style: none; /* PADRÃO: REMOVE O MARCADOR */
+}
+
+/* Classe específica para listas que PRECISAM do marcador (ex: Fundamentação Legal) */
 .list-disc {
     list-style-type: disc;
+    list-style-position: inside;
 }
-.list-inside li {
+.list-disc li {
     padding-left: 0.5rem; 
 }
 .space-y-2 > * + * {
     margin-top: 0.5rem;
 }
 
-
 /*
  * Chamada para Ferramentas (bg-blue-50, shadow-inner)
  */
 .ferramentas-chamada {
-    background-color: var(--color-background-blue); 
-    padding: 1.5rem; /* p-6 */
-    box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06); /* shadow-inner */
+    background-color: var(--color-background-secondary); 
+    padding: 1.5rem; 
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); /* Sombra mais destacada */
+    border: 1px solid #374151; 
 }
+.ferramentas-chamada h2 {
+    color: var(--color-primary);
+}
+
 
 /*
  * Botões e Links de Ação (A tag)
  */
 a {
     text-decoration: none;
-    transition: all 0.3s ease; /* transition duration-300 */
+    transition: all 0.3s ease;
 }
 
 .ferramentas-chamada a {
-    display: block; /* Garante que os botões ocupem a largura total em mobile */
-    font-weight: 600; /* font-semibold */
-    padding: 0.75rem 1.5rem; /* py-3 px-6 */
-    border-radius: 0.5rem; /* rounded-lg */
+    display: block; 
+    font-weight: 600; 
+    padding: 0.75rem 1.5rem; 
+    border-radius: 0.5rem; 
+    letter-spacing: 0.05em; /* Melhorado */
 }
 
 .bg-blue-600 {
-    background-color: #2563eb;
-    color: white;
+    background-color: #3b82f6; /* Azul mais claro para Dark Mode */
+    color: var(--color-background-dark); /* Texto escuro no botão claro */
 }
 
 .bg-blue-600:hover {
-    background-color: #1d4ed8; /* hover:bg-blue-700 */
+    background-color: #2563eb; 
+    color: white; 
 }
 
 .bg-yellow-500 {
     background-color: var(--color-secondary);
-    color: var(--color-primary);
+    color: var(--color-background-dark);
 }
 
 .bg-yellow-500:hover {
-    background-color: #fbbf24; /* hover:bg-yellow-600 */
+    background-color: #f59e0b; /* Amarelo mais escuro no hover */
 }
 
 
@@ -169,41 +196,50 @@ a {
  */
 .grid {
     display: grid;
-    gap: 1.5rem; /* gap-6 */
+    gap: 1.5rem; 
 }
 
 /* Estilos de borda e fundo das caixas de segurança */
 .border-l-4 { border-left-width: 4px; border-left-style: solid; }
+
 .border-red-500 { border-color: var(--color-danger); }
-.bg-red-50 { background-color: #fef2f2; }
-.text-red-700 { color: var(--color-danger); }
+.bg-red-50 { 
+    background-color: #451a1a; /* Fundo vermelho escuro */
+    border: 1px solid var(--color-danger);
+}
 
 .border-green-500 { border-color: var(--color-success); }
-.bg-green-50 { background-color: #f0fdf4; }
-.text-green-700 { color: var(--color-success); }
-
+.bg-green-50 { 
+    background-color: #064e3b; /* Fundo verde escuro */
+    border: 1px solid var(--color-success);
+}
+/* O texto dentro dessas caixas já é ajustado pelas cores de texto padrão */
 .p-4 { padding: 1rem; }
 
 /*
  * Aviso Legal (aside)
  */
 .aviso-legal {
-    background-color: #fee2e2; /* bg-red-200 */
-    color: var(--color-danger); /* text-red-800 */
-    padding: 1rem; /* p-4 */
+    background-color: #451a1a; /* Fundo escuro do alerta */
+    color: var(--color-danger); 
+    border: 1px solid var(--color-danger);
+    padding: 1rem; 
 }
-
+.aviso-legal p {
+    color: var(--color-text-light);
+}
 
 /*
  * Footer
  */
 footer {
-    border-top: 1px solid #e5e7eb; /* border-t */
-    padding-top: 1rem; /* py-4 */
+    border-top: 1px solid #374151; /* Borda escura */
+    padding-top: 1rem; 
     padding-bottom: 1rem;
-    color: #6b7280; /* text-gray-500 */
-    font-size: 0.875rem; /* text-sm */
+    color: var(--color-text-secondary); 
+    font-size: 0.875rem; 
     text-align: center;
+    background-color: var(--color-background-dark);
 }
 
 
@@ -211,19 +247,16 @@ footer {
  * Responsividade (Mobile e Desktop)
  */
 @media (min-width: 768px) {
-    /* md:grid-cols-2 */
     .grid-cols-1.md\:grid-cols-2 {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
     
-    /* sm:flex-row */
     .flex.flex-col.sm\:flex-row {
         flex-direction: row;
     }
 
-    /* Ajuste de espaçamento dos botões em desktop */
     .ferramentas-chamada div {
-        gap: 1rem; /* gap-4 */
+        gap: 1rem; 
     }
     .ferramentas-chamada a {
         display: inline-block;
