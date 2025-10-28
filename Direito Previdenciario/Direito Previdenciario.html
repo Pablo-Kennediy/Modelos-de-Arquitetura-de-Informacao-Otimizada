@@ -9,44 +9,50 @@
         content="Plataforma especializada e atualizada sobre o Direito Previdenciário brasileiro. Guia completo sobre Cálculo do Salário de Benefício, Regras de Transição (Pedágios 50% e 100%, Pontos) e Benefícios do RGPS. Consulte o texto da EC 103/2019 e Lei 8.213/91.">
     <link rel="icon" href="../assets/icons/icone-direito Previdenciário.png" type="image/png">
     <link rel="stylesheet" href="styles/main-Direito Previdenciario.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
     <header>
-        <h1>Guia de Direito Previdenciário e INSS</h1>
-        <p>Regras e Cálculo de Aposentadoria após a **Emenda Constitucional n.º 103/2019**</p>
         <nav aria-label="Navegação Principal">
             <ul>
                 <li><a href="#simulador">Calculadora</a></li>
-                <li><a href="#segurados">Segurados e Carência</a></li> 
+                <li><a href="#segurados">Segurados e Carência</a></li>
                 <li><a href="#regras">Regras de Transição</a></li>
                 <li><a href="#calculo-beneficio">Cálculo</a></li>
                 <li><a href="#beneficios">Benefícios</a></li>
-                <li><a href="#faq">FAQ</a></li> <li><a href="#autoridade">Fundamentação</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#autoridade">Fundamentação</a></li>
             </ul>
         </nav>
     </header>
     <main id="conteudo-principal">
-        
+        <h1>Guia de Direito Previdenciário e INSS</h1>
         <section id="alerta-legal" aria-labelledby="alerta-legal-titulo">
             <h2 id="alerta-legal-titulo">🚨 Aviso Legal e Integridade</h2>
-            <div class="disclaimer" role="alert"> ⚠️ **O conteúdo é informativo e não substitui o cálculo e o parecer de um advogado especialista em
+            <div class="disclaimer" role="alert"> ⚠️ **O conteúdo é informativo e não substitui o cálculo e o parecer de
+                um advogado especialista em
                 Direito Previdenciário ou contador.**
                 <p>Nossas ferramentas de cálculo utilizam o texto atualizado da **Lei n.º 8.213/91** e da **EC n.º
-                    103/2019**, mas os resultados são simulações. Lembre-se, conforme o <a href="README.md">README.md</a>, a segurança (padrões OWASP) e a anonimização dos dados são prioridades.</p>
+                    103/2019**, mas os resultados são simulações. Lembre-se, conforme o <a
+                        href="README.md">README.md</a>, a segurança (padrões OWASP) e a anonimização dos dados são
+                    prioridades.</p>
             </div>
         </section>
 
         <section id="simulador" aria-labelledby="simulador-titulo">
             <h2 id="simulador-titulo">🛠️ Calculadora Previdenciária e Elegibilidade</h2>
-            <p>Utilize a nossa ferramenta para simular as principais regras de transição. É crucial preencher a data de nascimento para calcular o fator idade em cada regra.</p>
+            <p>Utilize a nossa ferramenta para simular as principais regras de transição. É crucial preencher a data de
+                nascimento para calcular o fator idade em cada regra.</p>
             <div class="ferramenta-calculo">
                 <form id="form-elegibilidade" action="javascript:void(0);" method="POST">
                     <div class="input-group">
                         <label for="data-nascimento">Data de Nascimento:</label>
-                        <input type="date" id="data-nascimento" name="dataNascimento" required aria-describedby="dica-data-nascimento">
-                        <small id="dica-data-nascimento" class="input-dica">Necessário para cálculo da idade e regras.</small>
+                        <input type="date" id="data-nascimento" name="dataNascimento" required
+                            aria-describedby="dica-data-nascimento">
+                        <small id="dica-data-nascimento" class="input-dica">Necessário para cálculo da idade e
+                            regras.</small>
                     </div>
                     <div class="input-group">
                         <label for="tempo-contribuicao-anos">Tempo de Contribuição (Anos):</label>
@@ -68,17 +74,22 @@
 
         <section id="segurados" aria-labelledby="segurados-titulo">
             <h2 id="segurados-titulo">👨‍💼 Tipos de Segurados e Carência</h2>
-            <p>A elegibilidade a qualquer benefício começa pela correta classificação do segurado no RGPS e o cumprimento da **Carência** (número mínimo de contribuições mensais).</p>
+            <p>A elegibilidade a qualquer benefício começa pela correta classificação do segurado no RGPS e o
+                cumprimento da **Carência** (número mínimo de contribuições mensais).</p>
 
             <h3>Classificação de Segurados (Lei n.º 8.213/91)</h3>
-            <p>O foco é nos **Segurados Obrigatórios**, aqueles que exercem atividade remunerada e contribuem para o INSS, e nos **Segurados Facultativos**, que contribuem por vontade própria.</p>
+            <p>O foco é nos **Segurados Obrigatórios**, aqueles que exercem atividade remunerada e contribuem para o
+                INSS, e nos **Segurados Facultativos**, que contribuem por vontade própria.</p>
             <ul>
-                <li>**Obrigatórios:** Empregado, Empregado Doméstico, Contribuinte Individual (Autônomo), Trabalhador Avulso e Segurado Especial (Trabalhador rural).</li>
-                <li>**Facultativo:** Pessoa maior de 16 anos que não exerce atividade remunerada, mas contribui para ter acesso aos benefícios. Ex: Donas de casa, estudantes.</li>
+                <li>**Obrigatórios:** Empregado, Empregado Doméstico, Contribuinte Individual (Autônomo), Trabalhador
+                    Avulso e Segurado Especial (Trabalhador rural).</li>
+                <li>**Facultativo:** Pessoa maior de 16 anos que não exerce atividade remunerada, mas contribui para ter
+                    acesso aos benefícios. Ex: Donas de casa, estudantes.</li>
             </ul>
-            
+
             <h3>Carência Mínima (Exemplos)</h3>
-            <p>A carência é um requisito fundamental. A tabela de carência varia muito após a Reforma, mas estes são os requisitos mais comuns:</p>
+            <p>A carência é um requisito fundamental. A tabela de carência varia muito após a Reforma, mas estes são os
+                requisitos mais comuns:</p>
             <ul>
                 <li>**Aposentadoria por Idade Programada (Nova Regra):** 180 meses de contribuição.</li>
                 <li>**Auxílio por Incapacidade Temporária:** 12 meses de contribuição.</li>
@@ -88,72 +99,91 @@
 
         <section id="regras" aria-labelledby="regras-titulo">
             <h2 id="regras-titulo">📋 Regras de Transição da Reforma (EC 103/2019)</h2>
-            <p>Criadas para proteger quem já estava no sistema, mas não cumpriu os requisitos para se aposentar antes de 13/11/2019. O site foca na orientação precisa sobre a elegibilidade em cada uma:</p>
+            <p>Criadas para proteger quem já estava no sistema, mas não cumpriu os requisitos para se aposentar antes de
+                13/11/2019. O site foca na orientação precisa sobre a elegibilidade em cada uma:</p>
 
             <article>
                 <h3>1. Regra de Transição do Pedágio de 50%</h3>
-                <p>Aplicável a quem estava a, no máximo, **2 anos de cumprir o tempo mínimo de contribuição** na data da Reforma (13/11/2019). É necessário cumprir o tempo restante **mais um pedágio de 50%** sobre o tempo que faltava.</p>
+                <p>Aplicável a quem estava a, no máximo, **2 anos de cumprir o tempo mínimo de contribuição** na data da
+                    Reforma (13/11/2019). É necessário cumprir o tempo restante **mais um pedágio de 50%** sobre o tempo
+                    que faltava.</p>
                 <ul>
-                    <li>**Requisito Base (Mulheres/Homens):** 28/33 anos de contribuição, respectivamente, em 13/11/2019.</li>
-                    <li>**Fator de Cálculo:** O cálculo do benefício utiliza o fator previdenciário, sendo menos vantajoso em muitos casos.</li>
+                    <li>**Requisito Base (Mulheres/Homens):** 28/33 anos de contribuição, respectivamente, em
+                        13/11/2019.</li>
+                    <li>**Fator de Cálculo:** O cálculo do benefício utiliza o fator previdenciário, sendo menos
+                        vantajoso em muitos casos.</li>
                 </ul>
             </article>
 
             <article>
                 <h3>2. Regra de Transição do Pedágio de 100%</h3>
-                <p>Esta regra exige **idade mínima** e o cumprimento do tempo de contribuição que faltava em 13/11/2019 **mais um pedágio de 100%** sobre esse tempo.</p>
+                <p>Esta regra exige **idade mínima** e o cumprimento do tempo de contribuição que faltava em 13/11/2019
+                    **mais um pedágio de 100%** sobre esse tempo.</p>
                 <ul>
                     <li>**Idade Mínima:** 57 anos (Mulheres) e 60 anos (Homens).</li>
-                    <li>**Fator de Cálculo:** Mais vantajoso, pois garante **100% da média** das contribuições (desde 07/1994), após o cumprimento do pedágio e da idade.</li>
+                    <li>**Fator de Cálculo:** Mais vantajoso, pois garante **100% da média** das contribuições (desde
+                        07/1994), após o cumprimento do pedágio e da idade.</li>
                 </ul>
             </article>
 
             <article>
                 <h3>3. Regra de Transição por Pontos</h3>
-                <p>O requisito de pontos é a soma da **idade** com o **tempo de contribuição**. O número de pontos exigido aumenta progressivamente a cada ano.</p>
+                <p>O requisito de pontos é a soma da **idade** com o **tempo de contribuição**. O número de pontos
+                    exigido aumenta progressivamente a cada ano.</p>
                 <ul>
-                    <li>**Progressão:** O número mínimo de pontos aumenta 1 ponto por ano até atingir 100 pontos (Mulheres) e 105 pontos (Homens).</li>
+                    <li>**Progressão:** O número mínimo de pontos aumenta 1 ponto por ano até atingir 100 pontos
+                        (Mulheres) e 105 pontos (Homens).</li>
                     <li>**Tempo Mínimo de Contribuição:** 30 anos (Mulheres) e 35 anos (Homens).</li>
                 </ul>
             </article>
-            
+
             <article>
                 <h3>4. Regra de Transição da Idade Mínima Progressiva</h3>
-                <p>O foco é na idade, que aumenta **6 meses a cada ano** a partir de 2020, até atingir 62 anos (Mulheres) e 65 anos (Homens).</p>
+                <p>O foco é na idade, que aumenta **6 meses a cada ano** a partir de 2020, até atingir 62 anos
+                    (Mulheres) e 65 anos (Homens).</p>
                 <ul>
                     <li>**Tempo Mínimo de Contribuição:** 30 anos (Mulheres) e 35 anos (Homens).</li>
                 </ul>
             </article>
-            
+
         </section>
 
         <section id="calculo-beneficio" aria-labelledby="calculo-titulo">
             <h2 id="calculo-titulo">💰 Entendendo o Cálculo do Salário de Benefício (SB)</h2>
-            <p>O valor da aposentadoria é determinado pelo **Salário de Benefício (SB)**, que é a média dos seus salários de contribuição. O cálculo foi drasticamente alterado pela Reforma.</p>
+            <p>O valor da aposentadoria é determinado pelo **Salário de Benefício (SB)**, que é a média dos seus
+                salários de contribuição. O cálculo foi drasticamente alterado pela Reforma.</p>
 
             <article>
                 <h3>Cálculo Antes da Reforma (Direito Adquirido)</h3>
-                <p>O Salário de Benefício era calculado com base na média dos 80% maiores salários de contribuição desde Julho de 1994. Isso permitia descartar as contribuições mais baixas e elevar o valor final.</p>
+                <p>O Salário de Benefício era calculado com base na média dos 80% maiores salários de contribuição desde
+                    Julho de 1994. Isso permitia descartar as contribuições mais baixas e elevar o valor final.</p>
                 <ul>
                     <li>**Regra de Descarte (Vantajosa):** Excluíam-se 20% das menores contribuições.</li>
-                    <li>**Renda Mensal Inicial (RMI):** O SB era multiplicado pelo Fator Previdenciário (para aposentadoria por tempo) ou 100% (para aposentadoria por idade).</li>
+                    <li>**Renda Mensal Inicial (RMI):** O SB era multiplicado pelo Fator Previdenciário (para
+                        aposentadoria por tempo) ou 100% (para aposentadoria por idade).</li>
                 </ul>
             </article>
 
             <article>
                 <h3>Cálculo Após a Reforma (EC 103/2019)</h3>
-                <p>A nova regra é mais rigorosa e utiliza todas as contribuições, incluindo as menores, para o cálculo da média.</p>
+                <p>A nova regra é mais rigorosa e utiliza todas as contribuições, incluindo as menores, para o cálculo
+                    da média.</p>
                 <h4>Passo 1: Média Aritmética Simples</h4>
-                <p>O Salário de Benefício (SB) é a média de **100% dos salários de contribuição** desde julho de 1994 até a data do requerimento.</p>
+                <p>O Salário de Benefício (SB) é a média de **100% dos salários de contribuição** desde julho de 1994
+                    até a data do requerimento.</p>
                 <h4>Passo 2: Coeficiente da Renda Mensal Inicial (RMI)</h4>
-                <p>O valor final do benefício é o resultado da multiplicação do SB por um coeficiente, que varia de acordo com o tempo de contribuição:</p>
+                <p>O valor final do benefício é o resultado da multiplicação do SB por um coeficiente, que varia de
+                    acordo com o tempo de contribuição:</p>
                 <ul>
-                    <li>**Ponto de Partida:** 60% do SB (para quem tem 15 anos de contribuição, se mulher, ou 20 anos, se homem).</li>
+                    <li>**Ponto de Partida:** 60% do SB (para quem tem 15 anos de contribuição, se mulher, ou 20 anos,
+                        se homem).</li>
                     <li>**Acréscimo:** +2 pontos percentuais a cada ano que ultrapassar o tempo mínimo.</li>
-                    <li>**Teto:** Para atingir 100% do SB, a mulher precisa de 35 anos de contribuição e o homem de 40 anos.</li>
+                    <li>**Teto:** Para atingir 100% do SB, a mulher precisa de 35 anos de contribuição e o homem de 40
+                        anos.</li>
                 </ul>
                 <div class="disclaimer">
-                    <p>⚠️ **O descarte de contribuições para melhorar a média (PEC Paralela) é uma opção complexa e deve ser analisada por um especialista no seu histórico CNIS.**</p>
+                    <p>⚠️ **O descarte de contribuições para melhorar a média (PEC Paralela) é uma opção complexa e deve
+                        ser analisada por um especialista no seu histórico CNIS.**</p>
                 </div>
             </article>
         </section>
@@ -163,32 +193,44 @@
 
             <h3>1. Aposentadorias Comuns</h3>
             <ul>
-                <li>**Aposentadoria por Idade Programada:** A regra permanente da Reforma (62 anos para mulheres, 65 para homens e 15/20 anos de contribuição, respectivamente).</li>
-                <li>**Aposentadoria Tempo de Contribuição (Transição):** Aplicada para as pessoas que se enquadram em uma das quatro regras de transição detalhadas acima.</li>
+                <li>**Aposentadoria por Idade Programada:** A regra permanente da Reforma (62 anos para mulheres, 65
+                    para homens e 15/20 anos de contribuição, respectivamente).</li>
+                <li>**Aposentadoria Tempo de Contribuição (Transição):** Aplicada para as pessoas que se enquadram em
+                    uma das quatro regras de transição detalhadas acima.</li>
             </ul>
 
             <article>
                 <h3>2. Aposentadoria Especial (Agentes Nocivos)</h3>
-                <p>Benefício dedicado a quem trabalhou exposto a agentes químicos, físicos ou biológicos prejudiciais à saúde. As regras mudaram drasticamente, exigindo agora **idade mínima**.</p>
+                <p>Benefício dedicado a quem trabalhou exposto a agentes químicos, físicos ou biológicos prejudiciais à
+                    saúde. As regras mudaram drasticamente, exigindo agora **idade mínima**.</p>
                 <ul>
-                    <li>**Grau de Risco Mínimo (25 anos de contribuição):** Exige 60 anos de idade. Ex: Frentistas, metalúrgicos.</li>
-                    <li>**Grau de Risco Médio (20 anos de contribuição):** Exige 58 anos de idade. Ex: Trabalhadores em minas subterrâneas afastados da frente de produção.</li>
-                    <li>**Grau de Risco Máximo (15 anos de contribuição):** Exige 55 anos de idade. Ex: Mineiros de subsolo.</li>
+                    <li>**Grau de Risco Mínimo (25 anos de contribuição):** Exige 60 anos de idade. Ex: Frentistas,
+                        metalúrgicos.</li>
+                    <li>**Grau de Risco Médio (20 anos de contribuição):** Exige 58 anos de idade. Ex: Trabalhadores em
+                        minas subterrâneas afastados da frente de produção.</li>
+                    <li>**Grau de Risco Máximo (15 anos de contribuição):** Exige 55 anos de idade. Ex: Mineiros de
+                        subsolo.</li>
                 </ul>
-                <p>✅ **Direito Adquirido:** Quem completou o tempo especial mínimo (15, 20 ou 25 anos) até 13/11/2019 tem direito à regra antiga (sem idade mínima).</p>
+                <p>✅ **Direito Adquirido:** Quem completou o tempo especial mínimo (15, 20 ou 25 anos) até 13/11/2019
+                    tem direito à regra antiga (sem idade mínima).</p>
             </article>
 
             <h3>3. Benefícios por Incapacidade</h3>
             <p>O foco na nomenclatura é essencial, conforme a Lei n.º 8.213/91:</p>
             <ul>
-                <li>**Auxílio por Incapacidade Temporária (Antigo Auxílio-Doença):** Concedido ao segurado que fica incapacitado para o seu trabalho ou atividade habitual por mais de 15 dias.</li>
-                <li>**Aposentadoria por Incapacidade Permanente (Antiga Aposentadoria por Invalidez):** Concedido ao segurado que, após perícia, é considerado incapaz de reabilitação.</li>
+                <li>**Auxílio por Incapacidade Temporária (Antigo Auxílio-Doença):** Concedido ao segurado que fica
+                    incapacitado para o seu trabalho ou atividade habitual por mais de 15 dias.</li>
+                <li>**Aposentadoria por Incapacidade Permanente (Antiga Aposentadoria por Invalidez):** Concedido ao
+                    segurado que, após perícia, é considerado incapaz de reabilitação.</li>
             </ul>
-            
+
             <h3>4. Benefícios aos Dependentes e Assistenciais</h3>
             <ul>
-                <li>**Pensão por Morte:** Benefício pago aos dependentes do segurado que falecer, exige tempo de contribuição do falecido para determinar a duração do benefício para o dependente.</li>
-                <li>**LOAS/BPC (Benefício de Prestação Continuada):** Benefício **Assistencial** (não previdenciário) para idosos (65+) ou pessoas com deficiência, que comprovem baixa renda familiar e não tenham meios de prover a própria subsistência.</li>
+                <li>**Pensão por Morte:** Benefício pago aos dependentes do segurado que falecer, exige tempo de
+                    contribuição do falecido para determinar a duração do benefício para o dependente.</li>
+                <li>**LOAS/BPC (Benefício de Prestação Continuada):** Benefício **Assistencial** (não previdenciário)
+                    para idosos (65+) ou pessoas com deficiência, que comprovem baixa renda familiar e não tenham meios
+                    de prover a própria subsistência.</li>
             </ul>
         </section>
 
@@ -196,35 +238,47 @@
             <h2 id="faq-titulo">❓ Perguntas Frequentes (FAQ)</h2>
             <details>
                 <summary>O que é Tempo de Contribuição (TC)?</summary>
-                <p>É a soma de todos os períodos em que o segurado contribuiu para a Previdência Social. O tempo é contado em dias, sendo convertido em anos, meses e dias para a análise da elegibilidade. Pode incluir tempo rural, serviço militar e tempo especial convertido.</p>
+                <p>É a soma de todos os períodos em que o segurado contribuiu para a Previdência Social. O tempo é
+                    contado em dias, sendo convertido em anos, meses e dias para a análise da elegibilidade. Pode
+                    incluir tempo rural, serviço militar e tempo especial convertido.</p>
             </details>
             <details>
                 <summary>Como o CNIS pode afetar meu cálculo?</summary>
-                <p>O Cadastro Nacional de Informações Sociais (CNIS) é a sua "vida trabalhista" no INSS. Qualquer erro, como vínculos não encerrados, salários divergentes ou falta de contribuições, deve ser corrigido antes do pedido de aposentadoria. Nossa ferramenta de cálculo simula o resultado, mas o CNIS é o dado oficial.</p>
+                <p>O Cadastro Nacional de Informações Sociais (CNIS) é a sua "vida trabalhista" no INSS. Qualquer erro,
+                    como vínculos não encerrados, salários divergentes ou falta de contribuições, deve ser corrigido
+                    antes do pedido de aposentadoria. Nossa ferramenta de cálculo simula o resultado, mas o CNIS é o
+                    dado oficial.</p>
             </details>
             <details>
                 <summary>Posso me aposentar por duas regras de transição ao mesmo tempo?</summary>
-                <p>Não. Você só se aposenta por uma regra. O que acontece é que, se você cumprir os requisitos de várias regras, o INSS e seu advogado devem analisar aquela que oferece o maior valor de Renda Mensal Inicial (RMI) para o seu caso.</p>
+                <p>Não. Você só se aposenta por uma regra. O que acontece é que, se você cumprir os requisitos de várias
+                    regras, o INSS e seu advogado devem analisar aquela que oferece o maior valor de Renda Mensal
+                    Inicial (RMI) para o seu caso.</p>
             </details>
         </section>
 
         <section id="autoridade" aria-labelledby="autoridade-titulo">
             <h2 id="autoridade-titulo">📚 Fundamentação Legal e Integridade do Cálculo</h2>
-            <p>Garantimos a integridade do conteúdo através da consulta direta às fontes primárias. A lógica de cálculo no backend, como descrito no <a href="README.md">README.md</a>, é isolada em módulos para garantir a precisão e facilitar a auditoria (Testes de Regressão).</p>
+            <p>Garantimos a integridade do conteúdo através da consulta direta às fontes primárias. A lógica de cálculo
+                no backend, como descrito no <a href="README.md">README.md</a>, é isolada em módulos para garantir a
+                precisão e facilitar a auditoria (Testes de Regressão).</p>
             <p>Nossas fontes base são:</p>
             <ul>
                 <li>**Constituição Federal de 1988:** Artigos sobre Seguridade Social (Art. 194 a 204).</li>
-                <li>**Lei n.º 8.213/91:** O Plano de Benefícios da Previdência Social, fundamental para todas as regras.</li>
-                <li>**Emenda Constitucional n.º 103/2019:** A Reforma da Previdência, que alterou a maioria das regras e criou as Regras de Transição.</li>
-                <li>**Instruções Normativas do INSS:** Utilizamos as portarias mais recentes para garantir que o conteúdo reflita a prática administrativa atual.</li>
+                <li>**Lei n.º 8.213/91:** O Plano de Benefícios da Previdência Social, fundamental para todas as regras.
+                </li>
+                <li>**Emenda Constitucional n.º 103/2019:** A Reforma da Previdência, que alterou a maioria das regras e
+                    criou as Regras de Transição.</li>
+                <li>**Instruções Normativas do INSS:** Utilizamos as portarias mais recentes para garantir que o
+                    conteúdo reflita a prática administrativa atual.</li>
             </ul>
         </section>
     </main>
-    
+
     <button id="back-to-top" title="Voltar ao Topo" aria-label="Voltar ao Topo">
         <i class="fas fa-arrow-up"></i>
     </button>
-    
+
     <footer>
         <p>&copy; Guia de Direito Previdenciário. Projeto desenvolvido por <a href="">PK produtos digitais</a>.</p>
         <p>Desenvolvido com foco em Cyber Security (Padrões OWASP) e Qualidade de Código.</p>
@@ -233,7 +287,7 @@
         </a>
         <p>Licença [MIT].</p>
     </footer>
-    <script src="main-app.js"></script> 
+    <script src="main-app.js"></script>
 </body>
 
 </html>
