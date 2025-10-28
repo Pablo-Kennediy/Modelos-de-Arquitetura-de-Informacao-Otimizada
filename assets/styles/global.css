@@ -179,14 +179,38 @@ footer {
     color: var(--cor-link); /* Termos importantes em Dourado */
     font-weight: 700;
 }
-.secao-direito img{
-    max-width: 25px;
-}
+
 .flex{
     display: flex;
     align-items: center;
     gap: 10px;
 }
+
+/* Estilo para Ícones dentro dos Cards de Template */
+.template-card img {
+    max-width: 45px; /* Aumentado para melhor visibilidade */
+    height: auto;
+}
+
+/* --- NOVO ESTILO PARA OS ÍCONES NAS SEÇÕES DE DIREITO --- */
+.icone-direito {
+    max-width: 35px; /* Tamanho médio-pequeno para ícones de lista */
+    height: auto;
+    /* margin-right: 10px; - Já está no gap do .flex */
+}
+
+/* Ajuste para que o texto da lista não fique "encavalado" */
+.secao-direito ul .flex {
+    flex-direction: row; /* Garante que fiquem lado a lado */
+    align-items: flex-start; /* Alinha no topo */
+    margin-bottom: 15px; /* Espaçamento entre os blocos de Direito */
+}
+
+.secao-direito ul li {
+    flex-grow: 1; /* Permite que o texto da lista ocupe o espaço restante */
+    margin-bottom: 0; /* Remove a margem extra do <li> */
+}
+
 /* Estilos padrão (para telas maiores ou como fallback) */
 #top--nectar {
     display: flex; /* Mantém o layout flex para telas maiores */
