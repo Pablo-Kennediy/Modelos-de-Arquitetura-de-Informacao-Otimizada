@@ -26,10 +26,18 @@ body {
     background-color: var(--cor-fundo);
     color: var(--cor-texto-principal);
     line-height: 1.6;
-    padding: 2rem;
+    /* Removido o padding geral para deixar o banner principal "full-width" */
 }
 
-/* Estrutura principal */
+/* NOVO: Estilo para o espaço reservado para a imagem principal no topo */
+.banner-principal-espaco {
+    background-color: var(--cor-fundo); /* Fundo escuro */
+    padding-top: 50px; /* Adiciona espaço acima */
+    padding-bottom: 50px; /* Adiciona espaço abaixo */
+    text-align: center;
+}
+
+/* Estrutura principal - Adicionado padding lateral para a estrutura principal */
 main {
     max-width: 900px;
     margin: 0 auto;
@@ -41,8 +49,16 @@ main {
 }
 
 header {
+    max-width: 900px; /* Alinhar com o main */
+    margin: 0 auto 2rem auto;
+    padding: 2rem; /* Adicionar o padding aqui para telas menores */
+    background-color: var(--cor-fundo-secao);
+    border: 1px solid var(--cor-borda);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    margin-top: -30px; /* Puxa um pouco para cima do banner (efeito estético) */
+    position: relative;
     text-align: center;
-    margin-bottom: 2rem;
 }
 
 header h1 {
@@ -52,9 +68,65 @@ header h1 {
     font-weight: 700;
 }
 
-header p {
+header h2 {
+    font-size: 1.5rem;
+    color: var(--cor-link); /* Destaque em Dourado NECTAR */
+    margin-bottom: 1.5rem;
+    font-weight: 400;
+}
+
+/* Estilo para a Introdução Principal */
+.introducao-principal {
     font-size: 1.1rem;
     color: var(--cor-texto-secundario);
+    margin-bottom: 2rem;
+    padding: 0 1rem;
+}
+
+/* Estilos para a nova seção de Cards de Diferencial */
+.resource-cards-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-top: 2rem;
+    flex-wrap: wrap; /* Para quebra de linha em telas pequenas */
+    padding: 0 1rem;
+}
+
+.resource-card {
+    background-color: var(--cor-fundo);
+    border: 1px solid var(--cor-borda);
+    border-radius: 6px;
+    padding: 1.2rem;
+    flex: 1 1 200px; /* Flexbox: Cresce, encolhe e base de 200px */
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.resource-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(255, 183, 77, 0.1); /* Sutil sombra dourada */
+}
+
+.resource-card h3 {
+    color: var(--cor-link);
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+}
+
+.resource-card p {
+    font-size: 0.95rem;
+    color: var(--cor-texto-secundario);
+}
+
+.resource-card h3::before {
+    content: '★'; /* Ícone de Estrela */
+    color: var(--cor-link-hover);
+    margin-right: 8px;
+    font-size: 1.2rem;
 }
 
 .secao-direito {
@@ -99,11 +171,15 @@ a:hover {
 /* Rodapé */
 footer {
     text-align: center;
-    margin-top: 2rem;
+    max-width: 900px;
+    margin: 2rem auto 0 auto;
     padding-top: 1rem;
     border-top: 1px solid var(--cor-borda);
     color: var(--cor-texto-secundario);
+    padding-bottom: 2rem;
 }
+
+/* ... (O restante dos seus estilos específicos de .documento-legal e flexbox) ... */
 
 /* --- ESTILOS ESPECÍFICOS PARA DOCUMENTOS LEGAIS (Classe: .documento-legal) --- */
 
@@ -219,6 +295,16 @@ footer {
 
 /* Media Query: Aplicar estes estilos SOMENTE quando a largura da tela for menor ou igual a 500px */
 @media (max-width: 500px) {
+    header {
+        margin: 0 auto 2rem auto;
+    }
+    .resource-cards-container {
+        flex-direction: column; /* Empilha os cards em telas pequenas */
+        gap: 10px;
+    }
+    .resource-card {
+        flex: 1 1 100%;
+    }
     #top--nectar {
         display: block; /* Mudar para 'display: block;' para empilhar os elementos em telas pequenas */
     }
