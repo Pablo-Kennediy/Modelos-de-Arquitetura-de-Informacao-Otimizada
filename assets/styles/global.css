@@ -29,11 +29,17 @@ body {
     /* Removido o padding geral para deixar o banner principal "full-width" */
 }
 
+/* REGRA DE OURO PARA RESPONSIVIDADE DE IMAGENS: GARANTE QUE AS IMAGENS NUNCA QUEBREM A TELA */
+img {
+    max-width: 100%; /* Garante que a imagem nunca ultrapasse o tamanho do seu container */
+    height: auto;    /* Mantém a proporção original da imagem (evita distorção) */
+}
+
 /* NOVO: Estilo para o espaço reservado para a imagem principal no topo */
 .banner-principal-espaco {
     background-color: var(--cor-fundo); /* Fundo escuro */
     padding-top: 50px; /* Adiciona espaço acima */
-    padding-bottom: 50px; /* Adiciona espaço abaixo */
+    padding-bottom: 0; /* AJUSTE: Removido padding para facilitar a sobreposição do header */
     text-align: center;
 }
 
@@ -56,8 +62,11 @@ header {
     border: 1px solid var(--cor-borda);
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
     border-radius: 8px;
-    margin-top: -30px; /* Puxa um pouco para cima do banner (efeito estético) */
+    /* AJUSTE: Aumentado o margin-top negativo para puxar o header por cima da imagem */
+    margin-top: -150px; 
     position: relative;
+    /* AJUSTE: Adicionado z-index para garantir que o header fique ACIMA da imagem */
+    z-index: 10;
     text-align: center;
 }
 
@@ -179,8 +188,6 @@ footer {
     padding-bottom: 2rem;
 }
 
-/* ... (O restante dos seus estilos específicos de .documento-legal e flexbox) ... */
-
 /* --- ESTILOS ESPECÍFICOS PARA DOCUMENTOS LEGAIS (Classe: .documento-legal) --- */
 
 /* Ajuste de Títulos Principais */
@@ -296,7 +303,8 @@ footer {
 /* Media Query: Aplicar estes estilos SOMENTE quando a largura da tela for menor ou igual a 500px */
 @media (max-width: 500px) {
     header {
-        margin: 0 auto 2rem auto;
+        /* Mantemos o margin-top negativo para a sobreposição, mas talvez menor em telas pequenas */
+        margin-top: -100px; /* Um valor menor para telas menores */
     }
     .resource-cards-container {
         flex-direction: column; /* Empilha os cards em telas pequenas */
@@ -314,4 +322,4 @@ footer {
     #top--nectar h1 {
         /* Se precisar de alinhamento ou espaçamento adicional quando estiverem empilhados */
     }
-}
+}s
