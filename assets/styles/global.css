@@ -3,7 +3,7 @@
 
 /* Reset básico e variáveis de cores */
 :root {
-    --cor-fundo: #0c0c0c;
+    --cor-fundo: #090708;
     --cor-fundo-secao: #1a1a1a;
     --cor-texto-principal: #e0e0e0;
     --cor-texto-secundario: #a0a0a0;
@@ -39,7 +39,7 @@ body {
 
 /* Estrutura principal - Adicionado padding lateral para a estrutura principal */
 main {
-    max-width: 900px;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 2rem;
     background-color: var(--cor-fundo-secao);
@@ -49,7 +49,7 @@ main {
 }
 
 header {
-    max-width: 900px; /* Alinhar com o main */
+    max-width: 1200px; /* Alinhar com o main */
     margin: 0 auto 2rem auto;
     padding: 2rem; /* Adicionar o padding aqui para telas menores */
     background-color: var(--cor-fundo-secao);
