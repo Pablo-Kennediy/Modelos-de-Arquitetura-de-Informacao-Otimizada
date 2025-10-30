@@ -62,8 +62,8 @@ header {
     border: 1px solid var(--cor-borda);
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
     border-radius: 8px;
-    /* AJUSTE: Aumentado o margin-top negativo para puxar o header por cima da imagem */
-    margin-top: -150px; 
+    /* AJUSTE DE SOBREPOSIÇÃO: Reduzido de -150px para -70px para diminuir o quanto o header cobre o banner */
+    margin-top: -70px; 
     position: relative;
     /* AJUSTE: Adicionado z-index para garantir que o header fique ACIMA da imagem */
     z-index: 10;
@@ -194,7 +194,7 @@ footer {
 .documento-legal h1 {
     font-size: 2.5rem;
     color: var(--cor-link); /* Dourado no Título Principal */
-    border-bottom: 2px solid var(--cor-link); 
+    border-bottom: 2px solid var(--cor-link);
     padding-bottom: 15px;
     margin-bottom: 1.5rem;
     font-weight: 700;
@@ -303,8 +303,8 @@ footer {
 /* Media Query: Aplicar estes estilos SOMENTE quando a largura da tela for menor ou igual a 500px */
 @media (max-width: 500px) {
     header {
-        /* Mantemos o margin-top negativo para a sobreposição, mas talvez menor em telas pequenas */
-        margin-top: -100px; /* Um valor menor para telas menores */
+        /* AJUSTE DE SOBREPOSIÇÃO MOBILE: Reduzido de -100px para -50px */
+        margin-top: -50px; /* Um valor menor para telas menores */
     }
     .resource-cards-container {
         flex-direction: column; /* Empilha os cards em telas pequenas */
@@ -322,4 +322,11 @@ footer {
     #top--nectar h1 {
         /* Se precisar de alinhamento ou espaçamento adicional quando estiverem empilhados */
     }
-}s
+}
+
+/* --- ESTILO PARA O BANNER PRINCIPAL DE TELA CHEIA (Corrigido) --- */
+.banner-principal {
+    width: 100%;       /* Garante 100% da largura da tela */
+    height: auto;      /* Garante que a altura se ajuste proporcionalmente */
+    display: block;    /* Remove qualquer espaçamento extra de imagem inline */
+}
