@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solicite seu Orçamento Seguro | Desenvolvimento Web Profissional e LGPD</title>
+    <link rel="stylesheet" href="../assets/styles/global.css">
+    <link rel="shortcut icon" href="../assets/icons/icone-beija-flor.png" type="image/x-icon">
+
+    <style>
+        /* Estilos complementares (Mantidos, mas influenciados pelos ajustes do global.css) */
+        .form-section {
+            max-width: 650px; /* Aumento sutil para melhor visualização */
+            margin: 40px auto;
+            padding: 30px;
+            background-color: var(--cor-fundo-secao);
+            border-radius: 8px;
+            border: 1px solid var(--cor-borda);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Sombra mais forte */
+        }
+
+        .form-section h2 {
+            color: var(--cor-titulo);
+            border-bottom: 2px solid var(--cor-link);
+            padding-bottom: 10px;
+            margin-bottom: 25px; /* Mais espaço */
+            text-align: center;
+        }
+
+        .form-group {
+            margin-bottom: 25px; /* Mais espaço entre os campos (UX) */
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 700;
+            color: var(--cor-texto-principal);
+            display: flex; /* Para alinhar ícones se houver */
+            align-items: center;
+        }
+        
+        /* Estilos dos inputs ajustados no global.css para maior padronização */
+
+        .lgpd-consent label {
+            font-size: 15px; /* Leve aumento para melhor legibilidade */
+        }
+
+        /* Botão principal (CTA forte) */
+        .submit-button {
+            display: block;
+            width: 100%;
+            padding: 18px; /* Botão maior = mais destaque (VENDAS) */
+            background-color: var(--cor-link);
+            color: var(--cor-fundo); 
+            border: none;
+            border-radius: 6px;
+            font-size: 20px; /* Fonte maior no CTA (VENDAS) */
+            font-weight: 700;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s;
+            margin-top: 35px; /* Mais espaço */
+            letter-spacing: 1px; /* Espaçamento para o visual "premium" */
+        }
+
+        .submit-button:hover {
+            background-color: var(--cor-link-hover);
+            transform: translateY(-2px); /* Efeito de elevação sutil (UX) */
+        }
+    </style>
+</head>
+
+<body>
+
+    <main>
+        <h1 style="text-align: center; color: var(--cor-link);">Desenvolvimento Web com Padrão OWASP e LGPD</h1>
+        <p style="text-align: center; font-size: 1.2rem; margin-bottom: 3rem; color: var(--cor-texto-principal);">
+            Receba sua proposta para um projeto **Seguro**, Profissional e de **Alto Nível**.
+        </p>
+        
+        <section class="form-section">
+            <h2>⭐ Solicitar Análise de Projeto | Rápido e Seguro</h2>
+            <p style="margin-bottom: 25px; color: var(--cor-texto-secundario);">
+                Preencha os campos abaixo. **Quanto mais detalhes, mais precisa será nossa proposta.** Garantimos a segurança total dos seus dados.
+            </p>
+
+            <form action="/caminho/do/seu/script/processa_contato.php" method="POST">
+
+                <div class="form-group">
+                    <label for="nome">👤 Nome Completo (ou Razão Social): <strong style="color: red;">*</strong></label>
+                    <input type="text" id="nome" name="nome" placeholder="Ex: Ana Souza | Advocacia Digital Ltda."
+                        required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">📧 E-mail Profissional: <strong style="color: red;">*</strong></label>
+                    <input type="email" id="email" name="email" placeholder="contato@seusite.com.br" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="telefone">📱 Telefone (Whatsapp - Opcional):</label>
+                    <input type="tel" id="telefone" name="telefone" placeholder="(XX) XXXXX-XXXX">
+                </div>
+                
+                <div class="form-group">
+                    <label for="orcamento">💰 Orçamento Estimado para o Projeto (Opcional):</label>
+                    <select id="orcamento" name="orcamento">
+                        <option value="" disabled selected>Escolha uma faixa (Ajuda na velocidade da proposta)</option>
+                        <option value="ate-3k">Até R$ 3.000</option>
+                        <option value="3k-10k">R$ 3.000 - R$ 10.000</option>
+                        <option value="10k-20k">R$ 10.000 - R$ 20.000</option>
+                        <option value="acima-20k">Acima de R$ 20.000</option>
+                        <option value="nao-sei">Ainda não sei / A Definir</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="servico">✨ Tipo de Serviço de Interesse: <strong style="color: red;">*</strong></label>
+                    <select id="servico" name="servico" required>
+                        <option value="" disabled selected>Selecione a opção que melhor se encaixa</option>
+                        <option value="template-pronto">Template Jurídico (Pronto para uso - Lançamento Rápido)</option>
+                        <option value="desenvolvimento-customizado">Desenvolvimento Web Customizado (PHP/Frameworks)</option>
+                        <option value="auditoria-seguranca">Auditoria de Segurança e Performance (OWASP)</option>
+                        <option value="consultoria-lgpd">Consultoria/Adaptação LGPD e Jurídica</option>
+                        <option value="outro">Outro (Especifique na mensagem)</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="mensagem">📝 Detalhes do Projeto/Necessidade: <strong style="color: red;">*</strong></label>
+                    <textarea id="mensagem" name="mensagem"
+                        placeholder="Descreva a área de atuação, o objetivo do site e quais funcionalidades são cruciais (Ex: blog, área de cliente, e-commerce, etc.)."
+                        required></textarea>
+                </div>
+
+                <div class="lgpd-consent">
+                    <label>
+                        <input type="checkbox" name="consentimento_lgpd" value="aceito" required>
+                        Concordo com o tratamento dos meus dados (Nome, E-mail, Telefone) para a finalidade
+                        exclusiva de resposta a esta solicitação e cotação, conforme nossa <a
+                            href="../docs/politica_de_privacidade.html" target="_blank">Política de Privacidade</a>.
+                    </label>
+                </div>
+
+                <button type="submit" class="submit-button">RECEBER PROPOSTA DE SEGURANÇA AGORA</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; Desenvolvido por Pablo Kennediy. Todos os direitos reservados.</p>
+        <div class="links-legais">
+            <a href="https://www.instagram.com/pablo_kennediy/" target="_blank">Instagram</a> |
+            <a href="../docs/politica_de_privacidade.html">Política de Privacidade</a> |
+            <a href="../docs/termos_de_servico.html">Termos de Serviço</a>
+        </div>
+    </footer>
+</body>
+
+</html>
