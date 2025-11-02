@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo • Design System React/Next.js (Performance)</title>
+    <link rel="stylesheet" href="../assets/styles/global.css">
+    <link rel="shortcut icon" href="../assets/icons/icone-beija-flor.png" type="image/x-icon">
+    <style>
+        /* Estilos específicos para a página de React */
+        .react-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .react-header {
+            padding: 2rem 0;
+        }
+
+        .react-header h1 {
+            font-size: 2.8rem;
+            color: var(--cor-titulo);
+        }
+        
+        .react-header p {
+            color: var(--cor-primaria);
+            font-size: 1.3rem;
+            font-weight: 300;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 3rem;
+            text-align: left;
+        }
+
+        .feature-card {
+            background-color: var(--cor-card);
+            padding: 2rem;
+            border-radius: 10px;
+            border-left: 5px solid var(--cor-secundaria-sobria);
+            transition: border-left-color 0.3s ease;
+        }
+
+        .feature-card:hover {
+            border-left-color: var(--cor-primaria);
+        }
+
+        .feature-card h3 {
+            color: var(--cor-primaria-hover);
+            margin-top: 0;
+            font-size: 1.4rem;
+        }
+        
+        .cta-performance {
+            margin-top: 3rem;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <div class="react-container">
+            <div class="react-header">
+                <h1>🚀 Performance Incomparável com React/Next.js</h1>
+                <p>A velocidade que o Google ama e que seu cliente não espera.</p>
+            </div>
+            
+            <hr class="divisor-sutil">
+
+            <p style="text-align: left;">Integramos uma arquitetura **Headless** (Frontend em React) com seu **Backend PHP Seguro** (API Segura), garantindo o melhor de dois mundos: Performance de Ponta e Segurança de Dados Inviolável.</p>
+
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <h3>Carregamento Instantâneo</h3>
+                    <p>Otimização de rotas e Server-Side Rendering (SSR) garantem que sua página apareça em milissegundos, reduzindo a taxa de rejeição.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>SEO Superior</h3>
+                    <p>O Google ama sites rápidos. A estruturação do Next.js melhora a indexação e o ranqueamento orgânico do seu conteúdo.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Escalabilidade Modulada</h3>
+                    <p>Com componentes isolados e a segurança do seu PHP via API, a manutenção e a expansão do seu projeto se tornam mais simples e à prova de erros.</p>
+                </div>
+            </div>
+
+            <div class="cta-performance">
+                <a href="../FORMULÁRIO/contato.html" class="cta-button">
+                    Quero a Velocidade do React com a Segurança do PHP
+                </a>
+            </div>
+
+        </div>
+    </main>
+    
+    <footer class="main-footer">
+        <p>&copy; Desenvolvido por Pablo Kennediy. Todos os direitos reservados.</p>
+        <div class="links-legais">
+            <a href="https://www.instagram.com/pablo_kennediy/" target="_blank">Instagram</a> |
+            <a href="../docs/politica_de_privacidade.html">Política de Privacidade</a> |
+            <a href="../docs/termos_de_servico.html">Termos de Serviço</a>
+        </div>
+    </footer>
+</body>
+
+</html>
