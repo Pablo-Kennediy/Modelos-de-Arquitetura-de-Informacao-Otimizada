@@ -260,4 +260,31 @@ main {
 .main-footer a {
     font-weight: 300;
 }
+
+/* ================================================= */
+/* RESPONSIVIDADE DAS IMAGENS BANNER - REGRAS NOVAS  */
+/* ================================================= */
+
+/* Estado Padrão (MOBILE-FIRST): O banner mobile fica visível e o desktop escondido. */
+/* Regra para telas MENORES que 500px. */
+.banner-section .banner-mobile {
+    display: block; /* Visível por padrão em telas pequenas */
+}
+
+.banner-section .banner-desktop {
+    display: none;  /* Escondido por padrão em telas pequenas */
+}
+
+
+/* Media Query para Telas Maiores (≥ 501px) */
+/* Quando a tela tiver 501px ou mais, as regras abaixo serão aplicadas. */
+@media (min-width: 501px) {
+    .banner-section .banner-mobile {
+        display: none;   /* Esconde a imagem do celular */
+    }
+
+    .banner-section .banner-desktop {
+        display: block;  /* Mostra a imagem do desktop */
+    }
+}
 /* ... Adicione o restante do seu CSS (Media Queries, estilos de Formulário e LGPD) ... */
