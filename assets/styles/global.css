@@ -33,9 +33,9 @@ body {
 /* Ajustes de Estrutura */
 main {
     max-width: 1200px;
-    margin: 0 auto;
-    padding: 3rem 2rem; 
-    background-color: var(--cor-fundo-secao);
+    margin: auto;
+    padding: 2rem 1rem;
+     background-color: var(--cor-fundo-secao);
     border: 1px solid var(--cor-divisor);
     /* Sombra elegante e fora do comum (AERADO) */
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 10px rgba(255, 183, 77, 0.05); 
@@ -267,11 +267,11 @@ main {
 
 /* Estado Padrão (MOBILE-FIRST): O banner mobile fica visível e o desktop escondido. */
 /* Regra para telas MENORES que 500px. */
-.banner-section .banner-mobile {
+.banner-section, .banner-mobile {
     display: block; /* Visível por padrão em telas pequenas */
 }
 
-.banner-section .banner-desktop {
+.banner-section, .banner-desktop {
     display: none;  /* Escondido por padrão em telas pequenas */
 }
 
