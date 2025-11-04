@@ -274,3 +274,6 @@ main {
 .banner-section, .banner-desktop {
     display: none;  /* Escondido por padrão em telas pequenas */
 }
+a{
+    color: #a0a0a0;
+}
