@@ -5,7 +5,7 @@
 :root {
     /* Cores Escuras e Sólidas - Visual Profissional */
     --cor-fundo: #090909; /* Fundo mais escuro */
-    --cor-fundo-secao: #161616; /* Fundo de seção ligeiramente mais claro */
+    --cor-fundo-secao: #20201E; /* Fundo de seção ligeiramente mais claro */
     --cor-card: #1f1f1f; /* Fundo dos cards (destaque) */
 
     /* Cores de Destaque - O Dourado Premium */
@@ -276,4 +276,7 @@ main {
 }
 a{
     color: #a0a0a0;
+}
+ul li{
+    list-style: none;
 }
