@@ -27,7 +27,7 @@ body {
     font-family: 'Roboto', sans-serif;
     background-color: var(--cor-fundo-secao);
     color: var(--cor-texto-principal);
-    line-height: 1.7; 
+    line-height: 1.7;
 }
 
 /* Ajustes de Estrutura */
@@ -38,15 +38,15 @@ main {
      background-color: var(--cor-fundo-secao);
     border: 1px solid var(--cor-divisor);
     /* Sombra elegante e fora do comum (AERADO) */
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 10px rgba(255, 183, 77, 0.05); 
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 10px rgba(255, 183, 77, 0.05);
     border-radius: 12px; /* Cantos mais arredondados */
 }
 
 .banner-section img {
-    display: block; 
+    display: block;
     margin: 0 auto;
     /* Adiciona uma borda superior sutil para separar do header */
-    border-bottom: 2px solid var(--cor-divisor); 
+    border-bottom: 2px solid var(--cor-divisor);
 }
 
 /* Header - Posicionamento e Estilo */
@@ -142,7 +142,7 @@ main {
     padding-left: 30px;
 }
 .lista-seguranca li::before {
-    content: '✓'; 
+    content: '✓';
     position: absolute;
     left: 0;
     color: var(--cor-primaria);
@@ -166,7 +166,7 @@ main {
     transition: all 0.3s ease;
     border: 2px solid var(--cor-primaria);
     /* Sombra para efeito 3D sutil */
-    box-shadow: 0 5px 15px rgba(255, 183, 77, 0.4); 
+    box-shadow: 0 5px 15px rgba(255, 183, 77, 0.4);
 }
 .cta-button:hover {
     background-color: var(--cor-fundo);
@@ -191,7 +191,7 @@ main {
 .resource-card:hover {
     transform: scale(1.03);
     /* Sombra dourada mais presente no hover (VENDAS/DESTAQUE) */
-    box-shadow: 0 0 15px rgba(255, 183, 77, 0.3); 
+    box-shadow: 0 0 15px rgba(255, 183, 77, 0.3);
 }
 .resource-card h3 {
     color: var(--cor-primaria);
@@ -262,6 +262,158 @@ main {
 }
 
 /* ================================================= */
+/* NOVO ESTILO: Cards de Serviços e Diferenciais (Foco no Advogado) */
+/* ================================================= */
+
+.servicos-pablo-kennediy {
+    max-width: 1200px;
+    margin: 3rem auto;
+    padding: 0 1rem;
+}
+
+.servicos-pablo-kennediy p {
+    font-size: 1.1rem;
+    color: var(--cor-texto-principal);
+}
+
+/* Container para os Cards de Serviços (Layout de Colunas) */
+.servicos-e-contato .container {
+    display: grid;
+    /* Duas colunas em telas maiores, ou uma coluna em telas pequenas */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px; /* Espaçamento entre os cards */
+    margin-top: 2rem;
+}
+
+/* Estilo para cada Card de Serviço (Gestão e Marketing) */
+.servicos-e-contato .section {
+    background-color: var(--cor-card);
+    /* Ajuste para uma borda de distinção mais forte e com sombra de segurança */
+    border: 2px solid var(--cor-divisor); /* Borda mais grossa */
+    padding: 30px; /* Mais espaço interno para sensação de robustez */
+    border-radius: 12px; /* Ligeiramente mais arredondado */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s;
+    /* Sombra mais pronunciada para solidez (Blindagem) */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+}
+
+.servicos-e-contato .section:hover {
+    transform: translateY(-5px); /* Efeito sutil de levantar */
+    /* Dourado no hover forte para indicar excelência */
+    border-color: var(--cor-primaria);
+    /* Brilho dourado mais evidente */
+    box-shadow: 0 10px 30px rgba(255, 183, 77, 0.25);
+}
+
+.servicos-e-contato .section h2 {
+    color: var(--cor-primaria-hover); /* Título mais brilhante */
+    font-size: 1.6rem; /* Ligeiramente maior */
+    margin-top: 0;
+    padding-bottom: 12px;
+    /* Linha divisória mais sólida */
+    border-bottom: 3px solid var(--cor-primaria);
+}
+
+/* Itens da lista dentro dos cards */
+.servicos-e-contato .section ul {
+    list-style: none; /* Remove marcadores padrão */
+    padding: 0;
+    margin-top: 20px; /* Mais espaço */
+}
+
+.servicos-e-contato .section ul li {
+    padding: 12px 0; /* Mais padding */
+    /* Mudei para uma linha sólida para mais ordem */
+    border-bottom: 1px solid var(--cor-divisor);
+    color: var(--cor-texto-principal); /* Texto principal para destaque */
+    /* Adiciona um ícone/marcador personalizado */
+    position: relative;
+    padding-left: 25px; /* Mais espaço para o novo marcador */
+}
+
+.servicos-e-contato .section ul li strong {
+    color: var(--cor-primaria); /* Destaque para o Título da Funcionalidade */
+}
+
+.servicos-e-contato .section ul li::before {
+    /* Mudei para um quadrado sólido - Símbolo de "Ordem/Controle" */
+    content: '■'; 
+    color: var(--cor-primaria);
+    position: absolute;
+    left: 0;
+    font-size: 0.8rem;
+    line-height: 1.5;
+}
+
+.servicos-e-contato .section ul li:last-child {
+    border-bottom: none; /* Remove a linha do último item */
+}
+
+/* Seção de Diferenciais (Pilares de Excelência) */
+.servicos-e-contato h2 {
+    /* Garante que o H2 "Nosso Diferencial" tenha margem suficiente */
+    margin-top: 4rem; /* Mais espaçamento para respirar */
+    margin-bottom: 1.5rem;
+    font-size: 2.2rem; /* Ligeiramente maior */
+    color: var(--cor-titulo);
+}
+
+.diferenciais-lista {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    /* Transforma em 3 colunas em telas maiores */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px; /* Aumento do gap para mais distinção */
+}
+
+.diferenciais-lista li {
+    background-color: var(--cor-card);
+    /* Barra de destaque dourada mais forte */
+    border-left: 8px solid var(--cor-primaria); 
+    padding: 25px; /* Mais padding */
+    border-radius: 10px;
+    line-height: 1.7;
+    font-size: 1.05rem;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    /* Adiciona sombra sutil para profundidade */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.diferenciais-lista li:hover {
+    background-color: #252525;
+    /* Sombra dourada mais sutil no hover */
+    box-shadow: 0 4px 15px rgba(255, 183, 77, 0.1);
+}
+
+.diferenciais-lista li strong {
+    display: block;
+    color: var(--cor-primaria-hover);
+    margin-bottom: 8px; /* Mais espaço */
+    font-size: 1.2rem; /* Mais destaque */
+}
+
+/* Otimização da Chamada para Contato (H3) */
+.servicos-pablo-kennediy h3 {
+    text-align: center;
+    font-size: 2rem;
+    color: var(--cor-titulo);
+    margin-top: 4rem; /* Mais destaque antes do CTA */
+    margin-bottom: 1.5rem;
+}
+.servicos-pablo-kennediy p:last-of-type {
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+/* Responsividade para o CTA */
+.servicos-pablo-kennediy .cta-button {
+    /* Mantém o CTA centralizado e responsivo */
+    margin: 1rem auto 4rem auto !important; 
+}
+
+
+/* ================================================= */
 /* RESPONSIVIDADE DAS IMAGENS BANNER - REGRAS NOVAS  */
 /* ================================================= */
 
@@ -279,4 +431,16 @@ a{
 }
 ul li{
     list-style: none;
+}
+
+/* ================================================= */
+/* MEDIA QUERY PARA AJUSTES EM TELAS MAIORES (> 500px) */
+/* ================================================= */
+
+@media (min-width: 501px) {
+    /* Alteração da cor de fundo do BODY para a variável mais escura (--cor-fundo) */
+    /* A cor padrão no escopo global é var(--cor-fundo-secao) */
+    body {
+        background-color: var(--cor-fundo); 
+    }
 }
