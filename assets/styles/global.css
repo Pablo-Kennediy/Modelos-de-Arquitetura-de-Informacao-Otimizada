@@ -175,6 +175,13 @@ main {
     text-decoration: none;
 }
 
+/* NOVO ESTILO: Container para Centralização do CTA */
+.cta-container-centralizado {
+    text-align: center; /* Centraliza o elemento inline-block .cta-button */
+    padding: 20px 0;
+    margin: 2rem 0;
+}
+
 
 /* Cards de Benefícios (Resource Cards) - Atualizado para o novo Card Design */
 .resource-card {
@@ -409,9 +416,90 @@ main {
 /* Responsividade para o CTA */
 .servicos-pablo-kennediy .cta-button {
     /* Mantém o CTA centralizado e responsivo */
-    margin: 1rem auto 4rem auto !important; 
+    /* Removendo !important daqui e colocando a centralização no cta-container-centralizado */
+    margin: 1rem auto 4rem auto; 
 }
 
+/* ================================================= */
+/* NOVO ESTILO: Seção de Serviços e Chamada Advogado */
+/* ================================================= */
+
+.servicos-advocacia {
+    max-width: 850px;
+    margin: 3rem auto 2rem auto;
+    padding: 2.5rem;
+    background-color: var(--cor-card); /* Fundo do card */
+    border: 3px solid var(--cor-primaria); /* Borda Dourada para Forte Destaque */
+    border-radius: 12px;
+    /* Sombra de "Blindagem" - Mais escura e com brilho dourado sutil */
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.7), 0 0 10px rgba(255, 183, 77, 0.3);
+}
+
+.subtitulo-destaque-card {
+    font-size: 1.8rem;
+    color: var(--cor-titulo); /* Título Principal Branco */
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    /* Linha debaixo sutil */
+    border-bottom: 2px solid var(--cor-divisor);
+    padding-bottom: 15px;
+}
+
+.chamada-servicos {
+    font-size: 1.2rem;
+    color: var(--cor-texto-principal);
+    text-align: center;
+    margin-bottom: 2.5rem;
+    font-weight: 300;
+}
+
+.chamada-servicos strong {
+    color: var(--cor-primaria-hover); /* Destaque no pentest/segurança */
+    font-weight: 700;
+}
+
+/* Lista de Serviços (Estilo de Checklist Reforçado) */
+.lista-servicos-advocacia {
+    list-style: none;
+    padding: 0;
+}
+
+.lista-servicos-advocacia li {
+    background-color: #252525; /* Fundo ligeiramente diferente para cada item */
+    padding: 1.2rem;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border-left: 5px solid var(--cor-primaria); /* Barra Dourada no lado */
+    line-height: 1.6;
+    position: relative;
+    padding-left: 20px; /* Garante espaço para o texto */
+    transition: background-color 0.3s;
+}
+
+.lista-servicos-advocacia li:hover {
+    background-color: #303030;
+}
+
+.lista-servicos-advocacia li strong {
+    color: var(--cor-primaria); /* Destaque no título do benefício */
+    font-weight: 700;
+    display: inline; /* Não quebra a linha */
+}
+
+/* Ícone de Ponto de Destaque Sutil (Pode ser removido se não for necessário) */
+.lista-servicos-advocacia li::before {
+    content: '•'; 
+    position: absolute;
+    left: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--cor-primaria-hover);
+    font-size: 1.5rem;
+    line-height: 0;
+    font-weight: 700;
+    /* display: none;  <-- Descomentar para remover o ícone */
+}
 
 /* ================================================= */
 /* RESPONSIVIDADE DAS IMAGENS BANNER - REGRAS NOVAS  */
