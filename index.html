@@ -4,27 +4,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página Inicial • Néctar</title>
+    <title>Página Inicial • Néctar - PHP Seguro e Templates Jurídicos</title>
     <link rel="stylesheet" href="assets/styles/global.css">
     <link rel="shortcut icon" href="assets/icons/icone-beija-flor.png" type="image/x-icon">
 </head>
 
 <body>
-    <picture>
-        <source media="(max-width: 500px)" srcset="assets/img/banner-mobille-principal-espaco.png">
+    <header class="main-header">
+        <picture>
+            <source media="(max-width: 500px)" srcset="assets/img/banner-mobille-principal-espaco.png">
+            <source media="(min-width: 501px)" srcset="assets/img/banner-desktop-principal-espaco.png">
+            <img src="assets/img/banner-desktop-principal-espaco.png" alt="Banner principal do espaço (Imagem Responsiva)"
+                style="width: 100%; height: auto;">
+        </picture>
+        
+        <h1 class="titulo-destaque">🛡️ PHP Power & Segurança Inabalável</h1>
+        <p class="tagline">Templates e Desenvolvimento Web com Padrão de Defesa Profissional</p>
+    </header>
 
-        <source media="(min-width: 501px)" srcset="assets/img/banner-desktop-principal-espaco.png">
-
-        <img src="assets/img/banner-desktop-principal-espaco.png" alt="Banner principal do espaço (Imagem Responsiva)"
-            style="width: 100%; height: auto;">
-    </picture>
     <div style="padding: 25px; padding-top: 10px;">
-
         <main>
-            <h1 class="titulo-destaque">🛡️ PHP Power & Segurança Inabalável</h1>
-
-            <p class="tagline">Templates e Desenvolvimento Web com Padrão de Defesa Profissional</p>
-            <section style="max-width: 800px; margin: 0 auto; padding: 20px; font-family: Arial, sans-serif;">
+            <section class="secao-confianca">
+                <div class="container-confianca">
+                    <h2>Mais de <span>150 Advogados</span> Blindados</h2>
+                    <p class="tagline-confianca">Não vendemos código, vendemos tranquilidade legal e eficiência operacional.</p>
+                    <div class="depoimento-card">
+                        <p class="depoimento-texto">"O Néctar não só entregou nosso site em 7 dias, como nos treinou para gerenciar
+                             as petições dinâmicas sem depender de desenvolvedores. A blindagem LGPD é um diferencial inegável."</p>
+                        <p class="depoimento-autor">— Dr.ª Helena Albuquerque, <span style="color: var(--cor-primaria);">Advogada Digital</span>.</p>
+                    </div>
+                </div>
+            </section>
+            <section style="max-width: 800px; margin: 3rem auto 0 auto; padding: 20px; font-family: Arial, sans-serif;">
                 <h1>🍯 Serviços Oferecidos pelo Nectar (SaaS)</h1>
 
                 <h2>
@@ -34,7 +45,7 @@
 
                 <p>
                     <span role="img" aria-label="Foguete">🚀</span>
-                    Em 7 dias, seu escritório estará rodando com mais eficiência e profissionalismo.
+                    Em **7 dias**, seu escritório estará rodando com mais eficiência e profissionalismo.
                 </p>
 
                 <ul style="list-style-type: none; padding: 0;">
@@ -67,9 +78,35 @@
                         </p>
                     </li>
                 </ul>
-
             </section>
         </main>
+
+        <section class="secao-treinamento-venda">
+            <div class="container-treinamento">
+                <h2>📚 **Transforme o Template em Sua Própria Máquina de Vendas.**</h2>
+                <p>O template é a fundação. Nossa **Consultoria de Implementação** é o turbo que te ensina, passo a passo, a:</p>
+                <ul class="lista-vantagens-treinamento">
+                    <li>
+                        <strong>Domínio da Edição PHP/HTML:</strong> Simplificamos a personalização para que você faça ajustes finos e *branding* sem depender de ninguém.
+                    </li>
+                    <li>
+                        <strong>Integração de Leads e CRM:</strong> Conecte o template à sua ferramenta de marketing favorita e crie automações de vendas imediatamente.
+                    </li>
+                    <li>
+                        <strong>Otimização de SEO Legal:</strong> Orientação prática para indexar suas páginas nos termos jurídicos que seus clientes buscam.
+                    </li>
+                    <li>
+                        <strong>LGPD no Código:</strong> Entenda a arquitetura *Privacy by Design* do seu template e garanta a conformidade do seu escritório.
+                    </li>
+                </ul>
+                <h3 class="chamada-urgente">Não seja apenas um usuário. **Seja o mestre do seu código.**</h3>
+                <div class="cta-container-centralizado">
+                    <a href="FORMULÁRIO/contato.html?foco=consultoria" class="cta-button">
+                        Quero o Template Blindado + Consultoria de Edição
+                    </a>
+                </div>
+            </div>
+        </section>
         <section class="servicos-pablo-kennediy">
             <section class="servicos-e-contato">
                 <div class="container">
@@ -99,10 +136,8 @@
                         </ul>
                     </div>
                 </div>
-                <div class="pilares-lista">
-                </div>
 
-                <h2 style="text-align: center;">Nosso Diferencial</h2>
+                <h2 style="text-align: center;">Nosso Diferencial: Excelência Técnica e UX/UI</h2>
 
                 <ul class="diferenciais-lista">
                     <li>
@@ -123,14 +158,54 @@
                     </li>
                 </ul>
             </section>
-             </section>
-            <h1>💡 Cansado de Templates Bonitos, Mas Vulneráveis?</h1>
-            <h2>A internet está cheia de códigos rápidos que se tornam pesadelos de segurança. Para a sua empresa,
-                <strong>risco cibernético é prejuízo certo e multa legal</strong>. Você precisa de mais do que
-                estética:
-                você precisa de <strong>código que proteja seu negócio</strong>.
-            </h2>
-                           <h3 style="text-align: center;">🤝 Fale Conosco e Comece a Construir com Confiança!</h3>
+        </section>
+
+        <h1 style="margin-top: 4rem;">💡 Cansado de Templates Bonitos, Mas Vulneráveis?</h1>
+        <h2>A internet está cheia de códigos rápidos que se tornam pesadelos de segurança. Para a sua empresa,
+            <strong>risco cibernético é prejuízo certo e multa legal</strong>. Você precisa de mais do que estética:
+            você precisa de <strong>código que proteja seu negócio</strong>.
+        </h2>
+
+        <div class="table-container">
+            <h2 style="text-align: center; margin-top: 3rem; color: var(--cor-primaria-hover);">Pare de Comparar Preço. Compare Risco.</h2>
+            <table class="tabela-beneficios" cellpadding="15" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>Recurso</th>
+                        <th>Template Comum (Risco)</th>
+                        <th>Néctar (Blindado e Otimizado)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Segurança de Dados</strong></td>
+                        <td>Vulnerável a Injeção de SQL e XSS.</td>
+                        <td>🛡️ Imunidade a Injeções (**Prepared Statements com PDO**).</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Conformidade Legal</strong></td>
+                        <td>Não atende à LGPD, risco de multas.</td>
+                        <td>⚖️ LGPD Ready (Arquitetura *Privacy by Design*).</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Criptografia</strong></td>
+                        <td>Senhas fracas ou texto puro.</td>
+                        <td>🔐 Argon2 ou bcrypt de alta complexidade.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Performance/SEO</strong></td>
+                        <td>Lento, código inchado e má otimização.</td>
+                        <td>🚀 Otimização Máxima para carregamento instantâneo.</td>
+                    </tr>
+                    <tr>
+                        <td>**Suporte e Treinamento**</td>
+                        <td>Apenas instalação. Nenhum treinamento de edição.</td>
+                        <td>✅ Consultoria para Edição e Implementação de Vendas.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <h3 style="text-align: center;">🤝 Fale Conosco e Comece a Construir com Confiança!</h3>
 
         <div class="alerta-vulnerabilidade">
             <h3>Chega de Templates Vulneráveis! 🚨</h3>
@@ -156,7 +231,7 @@
                 </a>
             </p>
         </div>
-            <p>Não arrisque o futuro do seu negócio com código amador. Invista na excelência técnica e na
+            <p style="text-align: center;">Não arrisque o futuro do seu negócio com código amador. Invista na excelência técnica e na
                 tranquilidade
                 legal.</p>
             
@@ -165,10 +240,7 @@
                     Clique aqui e solicite seu orçamento
                 </a>
             </div>
-            <div class="table-container">
-            <table class="tabela-beneficios" cellpadding="10" cellspacing="0">
-            </table>
-        </div>
+            
         <h1>🛡️ Veja o nosso diferencial, Blindamos seu Código com as melhores praticas de Desenvolvimento</h1>
         
         <p>Seja em um template pronto ou em um serviço customizado, a sua solução terá esses pilares de segurança:
@@ -193,11 +265,11 @@
         </ul>
         <div class="resource-cards-container">
         </div>
+
         <section class="secao-filtro" id="secao-filtro-nicho">
-            <h2 class="subtitulo-filtro">Templates por Foco de Prospecção</h2>
+            <h2 class="subtitulo-filtro">Templates por Foco de Prospecção (Máquinas de Leads)</h2>
             <p>Selecione o modelo que melhor se alinha à sua estratégia de captação de clientes e marketing
-                jurídico.
-            </p>
+                jurídico.</p>
             <ul class="lista-templates">
                 <li class="template-card">
                     <img src="assets/icons/icone-lancamento.png" alt="Ícone Captação de Leads">
@@ -207,13 +279,28 @@
                             Gen)</a>
                         <p class="descricao-template">Design minimalista focado em capturar dados (e-mail, WhatsApp)
                             para
-                            campanhas de marketing legal altamente segmentadas.</p>
+                            campanhas de marketing legal altamente segmentadas. **Ideal para Tráfego Pago.**</p>
+                    </div>
+                </li>
+                <li class="template-card">
+                    <img src="assets/icons/icone-blog.png" alt="Ícone Blog Jurídico">
+                    <div>
+                        <a target="_blank" href="demos/blog-juridico.html" style="color: #FFB74D;">Blog Jurídico Otimizado (SEO Power)</a>
+                        <p class="descricao-template">Arquitetura focada em velocidade e SEO para dominar o tráfego orgânico e a autoridade no seu nicho. **Geração de Leads de Longo Prazo.**</p>
+                    </div>
+                </li>
+                <li class="template-card">
+                    <img src="assets/icons/icone-calculadora.png" alt="Ícone Calculadora Legal">
+                    <div>
+                        <a target="_blank" href="demos/calculadora-legal.html" style="color: #FFB74D;">Funil de Calculadoras (Lead Imediato)</a>
+                        <p class="descricao-template">Utiliza ferramentas como **Cálculo de Rescisão ou FGTS** como isca de alto valor para qualificar e capturar o contato do cliente imediatamente. **Alta Conversão!**</p>
                     </div>
                 </li>
             </ul>
         </section>
+        
         <section class="secao-filtro">
-            <h2 class="subtitulo-filtro">Design Systems / Vantagens Técnicas</h2>
+            <h2 class="subtitulo-filtro">Design Systems / Vantagens Técnicas (Aceleração)</h2>
             <p>Modelos construídos com tecnologias de ponta. Escolha pelo benefício técnico que mais importa para o
                 seu
                 projeto.</p>
@@ -228,6 +315,14 @@
                             essencial
                             para o
                             SEO e para reter o visitante.</p>
+                    </div>
+                </li>
+                <li class="template-card">
+                    <img src="assets/icons/icone-php.png" alt="Ícone PHP">
+                    <div>
+                        <a target="_blank" href="design-systems/php-puro.html"
+                            style="color: #FFB74D;">PHP Puro e Blindado (Controle Total)</a>
+                        <p class="descricao-template">Para quem exige controle total do back-end, sem frameworks, com as melhores práticas de segurança e performance. **Fácil de Adaptar no Treinamento.**</p>
                     </div>
                 </li>
             </ul>
