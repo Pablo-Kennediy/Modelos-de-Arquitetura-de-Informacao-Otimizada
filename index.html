@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página Inicial • Néctar - PHP Seguro e Templates Jurídicos</title>
+    <title>Néctar</title>
     <link rel="stylesheet" href="assets/styles/global.css">
     <link rel="shortcut icon" href="assets/icons/icone-beija-flor.png" type="image/x-icon">
 </head>
@@ -16,26 +16,6 @@
         <img src="assets/img/banner-desktop-principal-espaco.png" alt="Banner principal do espaço (Imagem Responsiva)"
             style="width: 100%; height: auto;">
     </picture>
-    <header class="main-header">
-        <h1 class="titulo-destaque">🛡️ PHP Power & Segurança Inabalável</h1>
-        <p class="tagline">Templates e Desenvolvimento Web com Padrão de Defesa Profissional</p>
-        <section class="secao-confianca">
-            <div class="container-confianca">
-                <h2>Mais de <span>150 Advogados</span> Blindados</h2>
-                <p class="tagline-confianca">Não vendemos código, vendemos tranquilidade legal e eficiência operacional.
-                </p>
-                <div class="depoimento-card">
-                    <p class="depoimento-texto">"O Néctar não só entregou nosso site em 7 dias, como nos treinou para
-                        gerenciar
-                        as petições dinâmicas sem depender de desenvolvedores. A blindagem LGPD é um diferencial
-                        inegável."</p>
-                    <p class="depoimento-autor">— Dr.ª Helena Albuquerque, <span
-                            style="color: var(--cor-primaria);">Advogada Digital</span>.</p>
-                </div>
-            </div>
-        </section>
-    </header>
-
     <div style="padding: 25px; ">
         <main>
             <section style="max-width: 800px; margin: 3rem auto 0 auto; padding: 20px; font-family: Arial, sans-serif;">
@@ -81,13 +61,18 @@
                         </p>
                     </li>
                 </ul>
+                <picture id="adv-banner">
+                    <source media="(max-width: 768px)" srcset="assets/img/adv-banner-mobille-principal-espaco.png">
+                    <img class="adv-banner-img" src="assets/img/adv-banner-desktop-principal-espaco.png"
+                        alt="Banner Secundário (Advogados)">
+                </picture>
             </section>
         </main>
-
         <section class="secao-treinamento-venda">
             <div class="container-treinamento">
                 <h2>📚Sua Própria Máquina de Vendas.</h2>
-                <p>O template é a fundação. Nossa <strong>Consultoria de Implementação</strong> é o turbo que te ensina, passo a
+                <p>O template é a fundação. Nossa <strong>Consultoria de Implementação</strong> é o turbo que te ensina,
+                    passo a
                     passo, a:</p>
                 <ul class="lista-vantagens-treinamento">
                     <li>
@@ -119,7 +104,8 @@
         <section class="servicos-pablo-kennediy">
             <section class="servicos-e-contato">
                 <div class="container">
-                    <h1>💡 NECTAR <br> Serviços Abrangentes, Categorizados por Área, Deste Software as a Service Completo e Pronto para Revolucionar Seu Negócio</h1>
+                    <h1>💡 NECTAR <br> Serviços Abrangentes, Categorizados por Área, Deste Software as a Service
+                        Completo e Pronto para Revolucionar Seu Negócio</h1>
                     <div class="section">
                         <h2>Gestão e Produtividade</h2>
                         <ul>
@@ -257,15 +243,26 @@
                 🔒 Diferencial Néctar: Código que é uma Fortaleza Digital
             </h2>
             <p style="font-size: 1.1rem; max-width: 900px; margin: 0 auto 2rem auto;">
-                Desenvolvimento com Padrão de Blindagem contra as vulnerabilidades mais críticas. Seja em um template ou em um serviço customizado, sua solução terá esses Pilares de Segurança Inegociáveis:
+                Desenvolvimento com Padrão de Blindagem contra as vulnerabilidades mais críticas. Seja em um template ou
+                em um serviço customizado, sua solução terá esses Pilares de Segurança Inegociáveis:
             </p>
         </div>
         <ul class="lista-seguranca">
-            <li><strong>Imunidade Total a Injeções</strong>: Uso obrigatório de <strong>Prepared Statements com PDO</strong>, eliminando a principal porta de entrada para invasores e garantindo que o seu PHP seja robusto.</li>
-            <li><strong>Mitigação de XSS (Cross-Site Scripting)</strong>: <strong>Validação Rigorosa e Sanitização</strong> de todas as saídas de dados. Impedimos que scripts maliciosos sejam executados no navegador dos seus usuários.</li>
-            <li><strong>Proteção Contra Falsificação (CSRF)</strong>: Implementação de <strong>Tokens Anti-CSRF</strong> únicos para cada sessão, garantindo que ações críticas (como pagamentos e alterações de dados) não possam ser forçadas por terceiros.</li>
-            <li><strong>Criptografia de Nível Militar</strong>: Senhas armazenadas com <strong>Argon2 ou bcrypt de alta complexidade</strong> e todo dado sensível tratado conforme as diretrizes de <em>Privacy by Design</em>.</li>
-            <li><strong>Gerenciamento de Sessões Blindado</strong>: Utilizamos configurações de <em>cookies</em> seguras (<code>HttpOnly</code> e <code>Secure</code>) e <strong>regeneração constante do ID de sessão</strong>, garantindo que o acesso do usuário não possa ser sequestrado.</li>
+            <li><strong>Imunidade Total a Injeções</strong>: Uso obrigatório de <strong>Prepared Statements com
+                    PDO</strong>, eliminando a principal porta de entrada para invasores e garantindo que o seu PHP seja
+                robusto.</li>
+            <li><strong>Mitigação de XSS (Cross-Site Scripting)</strong>: <strong>Validação Rigorosa e
+                    Sanitização</strong> de todas as saídas de dados. Impedimos que scripts maliciosos sejam executados
+                no navegador dos seus usuários.</li>
+            <li><strong>Proteção Contra Falsificação (CSRF)</strong>: Implementação de <strong>Tokens Anti-CSRF</strong>
+                únicos para cada sessão, garantindo que ações críticas (como pagamentos e alterações de dados) não
+                possam ser forçadas por terceiros.</li>
+            <li><strong>Criptografia de Nível Militar</strong>: Senhas armazenadas com <strong>Argon2 ou bcrypt de alta
+                    complexidade</strong> e todo dado sensível tratado conforme as diretrizes de <em>Privacy by
+                    Design</em>.</li>
+            <li><strong>Gerenciamento de Sessões Blindado</strong>: Utilizamos configurações de <em>cookies</em> seguras
+                (<code>HttpOnly</code> e <code>Secure</code>) e <strong>regeneração constante do ID de sessão</strong>,
+                garantindo que o acesso do usuário não possa ser sequestrado.</li>
         </ul>
         <div class="resource-cards-container">
         </div>

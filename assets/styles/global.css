@@ -598,6 +598,11 @@ ul li {
     list-style: none;
 }
 
+/*
+* BLOCO REMOVIDO: A lógica para o Segundo Banner (banner-desktop-secundario e banner-mobile-secundario)
+* foi removida, pois a responsividade agora é tratada de forma nativa pela tag <picture> no HTML.
+*/
+
 /* ================================================= */
 /* MEDIA QUERY PARA AJUSTES EM TELAS MAIORES (> 500px) */
 /* ================================================= */
@@ -609,6 +614,11 @@ ul li {
     body {
         background-color: var(--cor-fundo);
     }
+
+    /*
+    * REGRAS REMOVIDAS: A lógica de display: none/block para banner-mobile-secundario e banner-desktop-secundario
+    * foi removida, pois a responsividade agora é tratada de forma nativa pela tag <picture> no HTML.
+    */
 }
 
 /* ================================================= */
@@ -741,4 +751,32 @@ ul li {
         flex: 1 1 100%;
         /* Uma coluna em telas menores */
     }
+}
+
+/* ================================================= */
+/* NOVO ESTILO: Estilização do Banner Secundário (Advogado) - BORDA BLINDADA */
+/* ================================================= */
+
+/* Estilo para a tag <picture> que engloba o banner */
+#adv-banner {
+    display: block; /* Garante que ocupe a linha inteira */
+    margin: 3rem auto 0 auto; /* Centraliza e adiciona margem acima/abaixo */
+    max-width: 100%;
+}
+
+/* Estilo para a imagem dentro da tag <picture> */
+.adv-banner-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    /* Efeito de Borda "Blindada" */
+    border: 3px solid var(--cor-primaria); /* Borda sólida dourada */
+    border-radius: 10px; /* Cantos arredondados */
+    /* Sombra elegante e robusta */
+    box-shadow: 0 0 15px rgba(255, 183, 77, 0.5), 0 5px 25px rgba(0, 0, 0, 0.8);
+    transition: transform 0.3s ease;
+}
+
+.adv-banner-img:hover {
+    transform: scale(1.005);
 }
